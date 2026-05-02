@@ -5,23 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balanced News Digest</title>
   <style>
-    body { font-family: sans-serif; max-width: 860px; margin: 0 auto; padding: 1rem; }
+    body { font-family: sans-serif; margin: 0; padding: 1rem; }
     h1 { text-align: center; }
     .meta { text-align: center; color: #555; margin-bottom: 2rem; }
-    h2 { padding: 6px 12px; border-radius: 4px; font-size: 1rem; }
-    .article { margin: 0.75rem 0 0.75rem 1rem; }
+    h2 { padding: 6px 12px; border-radius: 4px; font-size: 1rem; margin-top: 0; }
+    .article { margin: 0.75rem 0 0.75rem 0.5rem; }
     .source { display: block; font-size: 0.75rem; font-weight: bold; color: #444; }
     a { color: #0046b8; }
     .also { font-size: 0.75rem; color: #666; margin: 2px 0 0; }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .col { min-width: 0; }
   </style>
 </head>
 <body>
   <h1>Balanced News Digest</h1>
-  <p class="meta">2026-05-02 09:32 &nbsp;|&nbsp; 80 unique stories</p>
-  
-      <section>
-        <h2 style="background:rgb(120,160,220)">LEFT</h2>
-        
+  <p class="meta">2026-05-02 09:39 &nbsp;|&nbsp; 80 unique stories</p>
+
+  <div class="three-col">
+    <div class="col"><section><h2 style="background:rgb(120,160,220)">LEFT</h2>
         <div class="article">
           <span class="source">Mother Jones</span>
           <a href="https://www.motherjones.com/politics/2026/05/college-university-student-protests-palestine-israel-gaza-trump/" target="_blank" rel="noopener">“Where Have All the Student Protests Gone?”</a>
@@ -121,11 +133,63 @@
           <span class="source">Common Dreams</span>
           <a href="https://www.commondreams.org/newswire/new-report-exposes-trump-cryptocurrency-corruption" target="_blank" rel="noopener">New Report Exposes Trump Cryptocurrency Corruption</a>
           
+        </div></section></div>
+    <div class="col"></div>
+    <div class="col"><section><h2 style="background:rgb(220,150,150)">RIGHT</h2>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/andy-barr-gets-coveted-trump-endorsement-kentucky-senate-race-replace/" target="_blank" rel="noopener">Rep. Andy Barr gets coveted Trump endorsement in Kentucky Senate race to replace McConnell</a>
+          
         </div>
-      </section>
-      <section>
-        <h2 style="background:rgb(160,190,230)">CENTER-LEFT</h2>
-        
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/pete-hegseth-orders-5000-us-troops-germany/" target="_blank" rel="noopener">Hegseth pulls 5,000 U.S. troops from Germany amid Trump tiff with chancellor</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/appeals-court-limits-access-abortion-drug-telemedicine/" target="_blank" rel="noopener">Appeals court limits access to abortion drug by telemedicine</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/ice-failed-tell-justice-department-could-reveal-warrant-judge-murder/" target="_blank" rel="noopener">ICE failed to tell Justice Dept. it could reveal warrant to judge; murder suspect went free</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/four-georgia-women-including-two-former-mail-carriers-indicted-49/" target="_blank" rel="noopener">Mail carriers, a bank manager and a repeat offender: inside an alleged $4.9 million postal scheme</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/nurse-sarah-danh-recovering-japan-honeymoon-collapse/" target="_blank" rel="noopener">Nurse Sarah Danh recovering after Japan honeymoon collapse</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/sydney-sweeney-posts-first-public-photos-scooter-braun-instagram/" target="_blank" rel="noopener">Sydney Sweeney posts first public photos with music manager Scooter Braun on Instagram</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/navys-new-flying-gas-station-soon-ready-autonomous-carrier-missions/" target="_blank" rel="noopener">Navy's new flying gas station will soon be ready for autonomous carrier missions</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/man-climbs-bridge-district-unfurls-black-cloth-iran-war-protest/" target="_blank" rel="noopener">High-wire protest: Man scales Washington bridge arch with black ribbon to oppose Iran war</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Washington Times</span>
+          <a href="https://www.washingtontimes.com/news/2026/may/1/kentucky-man-charged-deadly-bank-robbery-following-high-speed-chase/" target="_blank" rel="noopener">Kentucky man charged in deadly bank robbery after high-speed chase</a>
+          
+        </div></section></div>
+  </div>
+
+  <div class="two-col">
+    <div class="col"><section><h2 style="background:rgb(160,190,230)">CENTER-LEFT</h2>
         <div class="article">
           <span class="source">NPR</span>
           <a href="https://www.npr.org/2026/05/02/nx-s1-5798789/opinion-the-everyday-tragedy-of-gun-violence" target="_blank" rel="noopener">Opinion: The everyday tragedy of gun violence</a>
@@ -228,6 +292,11 @@
         </div>
         <div class="article">
           <span class="source">Al Jazeera</span>
+          <a href="https://www.aljazeera.com/opinions/2026/5/2/the-dark-side-of-gazas-new-fancy-cafes-and-restaurants?traffic_source=rss" target="_blank" rel="noopener">The dark side of Gaza’s new fancy cafes and restaurants</a>
+          
+        </div>
+        <div class="article">
+          <span class="source">Al Jazeera</span>
           <a href="https://www.aljazeera.com/news/2026/5/2/mali-probes-soldiers-suspected-of-involvement-in-military-base-attacks?traffic_source=rss" target="_blank" rel="noopener">Mali probes soldiers suspected of involvement in military base attacks</a>
           
         </div>
@@ -270,16 +339,8 @@
           <span class="source">Al Jazeera</span>
           <a href="https://www.aljazeera.com/news/2026/5/2/spirit-airlines-begins-wind-down-cancels-all-flights-over-fuel-crisis?traffic_source=rss" target="_blank" rel="noopener">Spirit Airlines begins ‘wind-down’, cancels all flights over fuel crisis</a>
           
-        </div>
-        <div class="article">
-          <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/2/uks-starmer-eyes-banning-some-pro-palestine-protests?traffic_source=rss" target="_blank" rel="noopener">UK’s Starmer eyes banning some pro-Palestine protests</a>
-          
-        </div>
-      </section>
-      <section>
-        <h2 style="background:rgb(230,190,160)">CENTER-RIGHT</h2>
-        
+        </div></section></div>
+    <div class="col"><section><h2 style="background:rgb(230,190,160)">CENTER-RIGHT</h2>
         <div class="article">
           <span class="source">Fox News</span>
           <a href="https://www.foxnews.com/us/beloved-crossing-guard-killed-alleged-drunk-driver-helping-kids-cross-street-louisiana" target="_blank" rel="noopener">Beloved crossing guard killed by alleged drunk driver while helping kids cross the street in Louisiana</a>
@@ -379,61 +440,7 @@
           <span class="source">The Hill</span>
           <a href="https://thehill.com/homenews/the-memo/5860143-trump-frustrated-war-iran-media/" target="_blank" rel="noopener">The Memo: Trump’s frustration on Iran boils over in attacks against media</a>
           
-        </div>
-      </section>
-      <section>
-        <h2 style="background:rgb(220,150,150)">RIGHT</h2>
-        
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/andy-barr-gets-coveted-trump-endorsement-kentucky-senate-race-replace/" target="_blank" rel="noopener">Rep. Andy Barr gets coveted Trump endorsement in Kentucky Senate race to replace McConnell</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/pete-hegseth-orders-5000-us-troops-germany/" target="_blank" rel="noopener">Hegseth pulls 5,000 U.S. troops from Germany amid Trump tiff with chancellor</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/appeals-court-limits-access-abortion-drug-telemedicine/" target="_blank" rel="noopener">Appeals court limits access to abortion drug by telemedicine</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/ice-failed-tell-justice-department-could-reveal-warrant-judge-murder/" target="_blank" rel="noopener">ICE failed to tell Justice Dept. it could reveal warrant to judge; murder suspect went free</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/four-georgia-women-including-two-former-mail-carriers-indicted-49/" target="_blank" rel="noopener">Mail carriers, a bank manager and a repeat offender: inside an alleged $4.9 million postal scheme</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/nurse-sarah-danh-recovering-japan-honeymoon-collapse/" target="_blank" rel="noopener">Nurse Sarah Danh recovering after Japan honeymoon collapse</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/sydney-sweeney-posts-first-public-photos-scooter-braun-instagram/" target="_blank" rel="noopener">Sydney Sweeney posts first public photos with music manager Scooter Braun on Instagram</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/navys-new-flying-gas-station-soon-ready-autonomous-carrier-missions/" target="_blank" rel="noopener">Navy's new flying gas station will soon be ready for autonomous carrier missions</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/man-climbs-bridge-district-unfurls-black-cloth-iran-war-protest/" target="_blank" rel="noopener">High-wire protest: Man scales Washington bridge arch with black ribbon to oppose Iran war</a>
-          
-        </div>
-        <div class="article">
-          <span class="source">Washington Times</span>
-          <a href="https://www.washingtontimes.com/news/2026/may/1/kentucky-man-charged-deadly-bank-robbery-following-high-speed-chase/" target="_blank" rel="noopener">Kentucky man charged in deadly bank robbery after high-speed chase</a>
-          
-        </div>
-      </section>
+        </div></section></div>
+  </div>
 </body>
 </html>
