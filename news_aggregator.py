@@ -31,7 +31,8 @@ SOURCES = [
     # Center-Right / Right
     {"name": "Fox News",         "lean": "center-right",  "url": "https://moxie.foxnews.com/google-publisher/latest.xml"},
     {"name": "The Hill",         "lean": "center-right",  "url": "https://thehill.com/news/feed/"},
-    {"name": "Washington Times", "lean": "right",         "url": "https://www.washingtontimes.com/rss/headlines/news/"},
+    {"name": "New York Post",     "lean": "right",         "url": "https://nypost.com/feed/"},
+    {"name": "National Review",   "lean": "right",         "url": "https://www.nationalreview.com/feed/"},
 ]
 
 MAX_PER_SOURCE       = 10
