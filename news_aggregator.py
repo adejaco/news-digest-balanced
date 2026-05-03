@@ -19,9 +19,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SOURCES = [
     # Center
-    {"name": "AP News",          "lean": "center",        "url": "https://feeds.apnews.com/rss/apf-topnews"},
-    {"name": "Reuters",          "lean": "center",        "url": "https://feeds.reuters.com/reuters/topNews"},
-    {"name": "USA Today",        "lean": "center",        "url": "https://rssfeeds.usatoday.com/usatoday-NewsTopStories"},
+{"name": "ABC News",         "lean": "center",        "url": "https://feeds.abcnews.com/abcnews/topstories"},
+    {"name": "CBS News",         "lean": "center",        "url": "https://www.cbsnews.com/latest/rss/main"},
     # Center-Left
     {"name": "NPR",              "lean": "center-left",   "url": "https://feeds.npr.org/1001/rss.xml"},
     {"name": "The Guardian",     "lean": "center-left",   "url": "https://www.theguardian.com/world/rss"},
@@ -51,10 +50,12 @@ LEAN_COLORS = {
 
 # ── Fetching ──────────────────────────────────────────────────────────────────
 
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
+
 def fetch_articles(source: dict) -> list:
     articles = []
     try:
-        feed = feedparser.parse(source["url"])
+        feed = feedparser.parse(source["url"], request_headers=HEADERS)
         for entry in feed.entries[:MAX_PER_SOURCE]:
             title = entry.get("title", "").strip()
             link  = entry.get("link",  "").strip()
@@ -154,6 +155,23 @@ def _rgb_css(lean: str) -> str:
     r, g, b = LEAN_COLORS.get(lean, (200, 200, 200))
     return f"rgb({r},{g},{b})"
 
+def _section(lean: str, articles: list) -> str:
+    if lean not in articles:
+        return ""
+    bg = _rgb_css(lean)
+    items = ""
+    for a in articles[lean]:
+        also = ""
+        if a["also_covered_by"]:
+            also = f'<p class="also">Also covered by: {", ".join(a["also_covered_by"])}</p>'
+        items += f"""
+        <div class="article">
+          <span class="source">{a["source"]}</span>
+          <a href="{a["link"]}" target="_blank" rel="noopener">{a["title"]}</a>
+          {also}
+        </div>"""
+    return f'<section><h2 style="background:{bg}">{lean.upper()}</h2>{items}</section>'
+
 def build_html(articles: list, output_path: str) -> None:
     grouped = {}
     for a in articles:
@@ -161,28 +179,11 @@ def build_html(articles: list, output_path: str) -> None:
 
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    sections_html = ""
-    for lean in LEAN_ORDER:
-        if lean not in grouped:
-            continue
-        bg = _rgb_css(lean)
-        items_html = ""
-        for a in grouped[lean]:
-            also = ""
-            if a["also_covered_by"]:
-                also = f'<p class="also">Also covered by: {", ".join(a["also_covered_by"])}</p>'
-            items_html += f"""
-        <div class="article">
-          <span class="source">{a["source"]}</span>
-          <a href="{a["link"]}" target="_blank" rel="noopener">{a["title"]}</a>
-          {also}
-        </div>"""
-
-        sections_html += f"""
-      <section>
-        <h2 style="background:{bg}">{lean.upper()}</h2>
-        {items_html}
-      </section>"""
+    col_left        = _section("left",         grouped)
+    col_center      = _section("center",       grouped)
+    col_right       = _section("right",        grouped)
+    col_center_left  = _section("center-left",  grouped)
+    col_center_right = _section("center-right", grouped)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -191,20 +192,43 @@ def build_html(articles: list, output_path: str) -> None:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balanced News Digest</title>
   <style>
-    body {{ font-family: sans-serif; max-width: 860px; margin: 0 auto; padding: 1rem; }}
+    body {{ font-family: sans-serif; margin: 0; padding: 1rem; }}
     h1 {{ text-align: center; }}
     .meta {{ text-align: center; color: #555; margin-bottom: 2rem; }}
-    h2 {{ padding: 6px 12px; border-radius: 4px; font-size: 1rem; }}
-    .article {{ margin: 0.75rem 0 0.75rem 1rem; }}
+    h2 {{ padding: 6px 12px; border-radius: 4px; font-size: 1rem; margin-top: 0; }}
+    .article {{ margin: 0.75rem 0 0.75rem 0.5rem; }}
     .source {{ display: block; font-size: 0.75rem; font-weight: bold; color: #444; }}
     a {{ color: #0046b8; }}
     .also {{ font-size: 0.75rem; color: #666; margin: 2px 0 0; }}
+
+    .three-col {{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }}
+    .two-col {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }}
+    .col {{ min-width: 0; }}
   </style>
 </head>
 <body>
   <h1>Balanced News Digest</h1>
   <p class="meta">{stamp} &nbsp;|&nbsp; {len(articles)} unique stories</p>
-  {sections_html}
+
+  <div class="three-col">
+    <div class="col">{col_left}</div>
+    <div class="col">{col_center}</div>
+    <div class="col">{col_right}</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">{col_center_left}</div>
+    <div class="col">{col_center_right}</div>
+  </div>
 </body>
 </html>"""
 
