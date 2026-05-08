@@ -2,7 +2,7 @@ name: Daily News Digest
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # 6am ET — adjust if needed (times are UTC)
+    - cron: '0 8 * * *'  # 6am ET — adjust if needed (times are UTC)
   workflow_dispatch:       # lets you trigger it manually from GitHub
 
 env:
