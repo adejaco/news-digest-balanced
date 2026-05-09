@@ -413,12 +413,14 @@ def build_html(articles: list, output_path: str) -> None:
     }}
 
     /* ── Responsive ── */
-    @media (max-width: 960px) {{
-      .grid-top   {{ grid-template-columns: 1fr 1fr; }}
-    }}
     @media (max-width: 640px) {{
-      .grid-top, .grid-bottom {{ grid-template-columns: 1fr; }}
-      header h1 {{ font-size: 1.5rem; }}
+      header h1 {{ font-size: 1.4rem; }}
+      .article {{ padding: 0.6rem 0.5rem; }}
+      .article a {{ font-size: 0.78rem; }}
+      .source {{ font-size: 0.58rem; }}
+      .lean-header {{ font-size: 0.62rem; padding: 0.45rem 0.5rem; }}
+      main {{ padding: 0.5rem; }}
+      .grid-top, .grid-bottom {{ gap: 0.5rem; }}
     }}
   </style>
 </head>
