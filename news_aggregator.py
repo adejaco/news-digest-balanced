@@ -178,15 +178,17 @@ def _rgb_css(lean: str) -> str:
     r, g, b = LEAN_COLORS.get(lean, (200, 200, 200))
     return f"rgb({r},{g},{b})"
 
-def _section(lean: str, articles: list) -> str:
-    if lean not in articles:
+def _section(lean: str, grouped: dict) -> str:
+    if lean not in grouped:
         return ""
     bg = _rgb_css(lean)
+    label = lean.upper()
     items = ""
-    for a in articles[lean]:
+    for a in grouped[lean]:
         also = ""
         if a["also_covered_by"]:
-            also = f'<p class="also">Also covered by: {", ".join(a["also_covered_by"])}</p>'
+            covered = ", ".join(a["also_covered_by"])
+            also = f'<p class="also"><span class="also-label">Also covered by:</span> {covered}</p>'
         summary_attr = a.get("summary", "").replace('"', "&quot;")
         items += f"""
         <div class="article" data-summary="{summary_attr}">
@@ -194,7 +196,17 @@ def _section(lean: str, articles: list) -> str:
           <a href="{a["link"]}" target="_blank" rel="noopener">{a["title"]}</a>
           {also}
         </div>"""
-    return f'<section><h2 style="background:{bg}">{lean.upper()}</h2>{items}</section>'
+    return f'<section><div class="lean-header" style="background:{bg}">{label}</div>{items}</section>'
+
+
+def _spectrum_legend() -> str:
+    items = ""
+    for lean in LEAN_ORDER:
+        color = _rgb_css(lean)
+        label = lean.upper()
+        items += f'<span class="sp-item"><span class="sp-dot" style="background:{color}"></span>{label}</span>'
+    return f'<div class="spectrum">{items}</div>'
+
 
 def build_html(articles: list, output_path: str) -> None:
     grouped = {}
@@ -208,6 +220,7 @@ def build_html(articles: list, output_path: str) -> None:
     col_right        = _section("right",        grouped)
     col_center_left  = _section("center-left",  grouped)
     col_center_right = _section("center-right", grouped)
+    spectrum         = _spectrum_legend()
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -215,77 +228,232 @@ def build_html(articles: list, output_path: str) -> None:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Balanced News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {{ font-family: sans-serif; margin: 0; padding: 1rem; }}
-    h1 {{ text-align: center; }}
-    .meta {{ text-align: center; color: #555; margin-bottom: 1.25rem; }}
-    h2 {{ padding: 6px 12px; border-radius: 4px; font-size: 1rem; margin-top: 0; }}
-    .article {{ margin: 0.75rem 0 0.75rem 0.5rem; }}
-    .source {{ display: block; font-size: 0.75rem; font-weight: bold; color: #444; }}
-    a {{ color: #0046b8; }}
-    .also {{ font-size: 0.75rem; color: #666; margin: 2px 0 0; }}
+    *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
-    .three-col {{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+    body {{
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.5;
     }}
-    .two-col {{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }}
-    .col {{ min-width: 0; }}
 
-    /* ── Search bar ── */
-    .search-wrap {{
+    /* ── Header ── */
+    header {{
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1.5rem 0;
+    }}
+    header h1 {{
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }}
+    .header-meta {{
+      margin-top: 0.35rem;
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }}
+
+    /* ── Search ── */
+    .search-bar {{
+      background: #0f172a;
+      padding: 1.1rem 1.5rem 1.25rem;
       display: flex;
-      justify-content: center;
-      margin-bottom: 1.75rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
     }}
-    .search-wrap input {{
+    .search-input-wrap {{
+      position: relative;
       width: 100%;
-      max-width: 520px;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #bbb;
-      border-radius: 999px;
-      outline: none;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      max-width: 580px;
     }}
-    .search-wrap input:focus {{
-      border-color: #0046b8;
-      box-shadow: 0 0 0 3px rgba(0,70,184,0.15);
+    .search-icon {{
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      pointer-events: none;
+    }}
+    .search-input-wrap input {{
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      background: #1e293b;
+      color: #f1f5f9;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }}
+    .search-input-wrap input::placeholder {{ color: #64748b; }}
+    .search-input-wrap input:focus {{
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
     }}
     #search-status {{
+      font-size: 0.78rem;
+      color: #64748b;
+      min-height: 1.1em;
+    }}
+
+    /* ── Spectrum legend ── */
+    .spectrum {{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      padding: 0.7rem 1rem;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+    }}
+    .sp-item {{
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #64748b;
+    }}
+    .sp-dot {{
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }}
+
+    /* ── Main grid ── */
+    main {{
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }}
+    .grid-top {{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.1rem;
+      margin-bottom: 1.1rem;
+    }}
+    .grid-bottom {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }}
+
+    /* ── Column card ── */
+    .col-card {{
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }}
+
+    /* ── Lean header ── */
+    .lean-header {{
+      padding: 0.55rem 1rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #fff;
+    }}
+
+    /* ── Article rows ── */
+    .article {{
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.1s;
+    }}
+    .article:last-child {{ border-bottom: none; }}
+    .article:hover {{ background: #f8fafc; }}
+
+    .source {{
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: #94a3b8;
+      margin-bottom: 0.28rem;
+    }}
+    .article a {{
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #1e293b;
+      text-decoration: none;
+      line-height: 1.45;
+    }}
+    .article a:hover {{
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }}
+    .also {{
+      margin-top: 0.35rem;
+      font-size: 0.68rem;
+      color: #94a3b8;
+    }}
+    .also-label {{ font-weight: 600; color: #64748b; }}
+
+    /* ── Footer ── */
+    footer {{
       text-align: center;
-      color: #666;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-      min-height: 1.2em;
+      padding: 2rem 1rem;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }}
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {{
+      .grid-top   {{ grid-template-columns: 1fr 1fr; }}
+    }}
+    @media (max-width: 640px) {{
+      .grid-top, .grid-bottom {{ grid-template-columns: 1fr; }}
+      header h1 {{ font-size: 1.5rem; }}
     }}
   </style>
 </head>
 <body>
-  <h1>Daily Balanced News</h1>
-  <p class="meta">{stamp} &nbsp;|&nbsp; {len(articles)} unique stories</p>
 
-  <div class="search-wrap">
-    <input id="search" type="search" placeholder="Search topics from the daily feeds below" autocomplete="off">
-  </div>
-  <p id="search-status"></p>
+  <header>
+    <h1>Daily Balanced News</h1>
+    <p class="header-meta">{stamp} &nbsp;&bull;&nbsp; {len(articles)} unique stories across the political spectrum</p>
+  </header>
 
-  <div id="grid-top" class="three-col">
-    <div class="col">{col_left}</div>
-    <div class="col">{col_center}</div>
-    <div class="col">{col_right}</div>
+  <div class="search-bar">
+    <div class="search-input-wrap">
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input id="search" type="search" placeholder="Search topics from the daily feeds below" autocomplete="off">
+    </div>
+    <p id="search-status"></p>
   </div>
 
-  <div id="grid-bottom" class="two-col">
-    <div class="col">{col_center_left}</div>
-    <div class="col">{col_center_right}</div>
-  </div>
+  {spectrum}
+
+  <main>
+    <div class="grid-top">
+      <div class="col-card">{col_left}</div>
+      <div class="col-card">{col_center}</div>
+      <div class="col-card">{col_right}</div>
+    </div>
+    <div class="grid-bottom">
+      <div class="col-card">{col_center_left}</div>
+      <div class="col-card">{col_center_right}</div>
+    </div>
+  </main>
+
+  <footer>Daily Balanced News &bull; Powered by public RSS feeds &bull; {stamp}</footer>
 
   <script>
     const input  = document.getElementById('search');
@@ -294,21 +462,19 @@ def build_html(articles: list, output_path: str) -> None:
     input.addEventListener('input', function () {{
       const raw   = this.value.trim();
       const terms = raw.toLowerCase().split(/\s+/).filter(Boolean);
-
       let visible = 0;
 
       document.querySelectorAll('.article').forEach(function (card) {{
-        const title   = (card.querySelector('a') || {{}}).textContent || '';
-        const summary = card.dataset.summary || '';
+        const title    = (card.querySelector('a') || {{}}).textContent || '';
+        const summary  = card.dataset.summary || '';
         const haystack = (title + ' ' + summary).toLowerCase();
-        const match = terms.length === 0 || terms.every(function (t) {{
+        const match    = terms.length === 0 || terms.every(function (t) {{
           return haystack.includes(t);
         }});
         card.style.display = match ? '' : 'none';
         if (match) visible++;
       }});
 
-      // Hide lean sections that have no visible articles
       document.querySelectorAll('section').forEach(function (sec) {{
         const any = Array.from(sec.querySelectorAll('.article'))
                         .some(function (c) {{ return c.style.display !== 'none'; }});
@@ -317,7 +483,7 @@ def build_html(articles: list, output_path: str) -> None:
 
       status.textContent = terms.length === 0
         ? ''
-        : visible + ' stor' + (visible === 1 ? 'y' : 'ies') + ' matching "' + raw + '"';
+        : visible + ' stor' + (visible === 1 ? 'y' : 'ies') + ' matching “' + raw + '”';
     }});
   </script>
 </body>
