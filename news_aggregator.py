@@ -5,6 +5,7 @@ Generates a PDF digest and an index.html for GitHub Pages.
 Dependencies: pip install feedparser fpdf2
 """
 
+import html as html_lib
 import os
 import re
 import sys
@@ -18,21 +19,33 @@ from fpdf import FPDF
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SOURCES = [
-    # Center
-{"name": "ABC News",         "lean": "center",        "url": "https://feeds.abcnews.com/abcnews/topstories"},
-    {"name": "CBS News",         "lean": "center",        "url": "https://www.cbsnews.com/latest/rss/main"},
-    # Center-Left
-    {"name": "NPR",              "lean": "center-left",   "url": "https://feeds.npr.org/1001/rss.xml"},
-    {"name": "The Guardian",     "lean": "center-left",   "url": "https://www.theguardian.com/world/rss"},
-    {"name": "Al Jazeera",       "lean": "center-left",   "url": "https://www.aljazeera.com/xml/rss/all.xml"},
     # Left
-    {"name": "Mother Jones",     "lean": "left",          "url": "https://www.motherjones.com/feed/"},
-    {"name": "Common Dreams",    "lean": "left",          "url": "https://www.commondreams.org/rss.xml"},
-    # Center-Right / Right
-    {"name": "Fox News",         "lean": "center-right",  "url": "https://moxie.foxnews.com/google-publisher/latest.xml"},
-    {"name": "The Hill",         "lean": "center-right",  "url": "https://thehill.com/news/feed/"},
-    {"name": "New York Post",     "lean": "right",         "url": "https://nypost.com/feed/"},
-    {"name": "National Review",   "lean": "right",         "url": "https://www.nationalreview.com/feed/"},
+    {"name": "Mother Jones",        "lean": "left",          "url": "https://www.motherjones.com/feed/"},
+    {"name": "Common Dreams",       "lean": "left",          "url": "https://www.commondreams.org/rss.xml"},
+    {"name": "HuffPost",            "lean": "left",          "url": "https://www.huffpost.com/section/front-page/feed"},
+    {"name": "Democracy Now",       "lean": "left",          "url": "https://www.democracynow.org/democracynow.rss"},
+    # Center-Left
+    {"name": "NPR",                 "lean": "center-left",   "url": "https://feeds.npr.org/1001/rss.xml"},
+    {"name": "The Guardian",        "lean": "center-left",   "url": "https://www.theguardian.com/world/rss"},
+    {"name": "Al Jazeera",          "lean": "center-left",   "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"name": "Politico",            "lean": "center-left",   "url": "https://www.politico.com/rss/politicopicks.xml"},
+    {"name": "Vox",                 "lean": "center-left",   "url": "https://www.vox.com/rss/index.xml"},
+    {"name": "PBS NewsHour",        "lean": "center-left",   "url": "https://www.pbs.org/newshour/feeds/rss/headlines"},
+    # Center
+    {"name": "ABC News",            "lean": "center",        "url": "https://feeds.abcnews.com/abcnews/topstories"},
+    {"name": "CBS News",            "lean": "center",        "url": "https://www.cbsnews.com/latest/rss/main"},
+    {"name": "CNBC",                "lean": "center",        "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"},
+    # Center-Right
+    {"name": "Fox News",            "lean": "center-right",  "url": "https://moxie.foxnews.com/google-publisher/latest.xml"},
+    {"name": "The Hill",            "lean": "center-right",  "url": "https://thehill.com/news/feed/"},
+    {"name": "Reason",              "lean": "center-right",  "url": "https://reason.com/feed/"},
+    {"name": "Washington Examiner", "lean": "center-right",  "url": "https://www.washingtonexaminer.com/feed"},
+    # Right
+    {"name": "New York Post",       "lean": "right",         "url": "https://nypost.com/feed/"},
+    {"name": "National Review",     "lean": "right",         "url": "https://www.nationalreview.com/feed/"},
+    {"name": "Breitbart",           "lean": "right",         "url": "https://feeds.feedburner.com/breitbart"},
+    {"name": "Daily Caller",        "lean": "right",         "url": "https://dailycaller.com/feed/"},
+    {"name": "The Federalist",      "lean": "right",         "url": "https://thefederalist.com/feed/"},
 ]
 
 MAX_PER_SOURCE       = 10
@@ -53,6 +66,13 @@ LEAN_COLORS = {
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
 
+def _strip_html(text: str) -> str:
+    """Remove HTML tags and unescape entities so summaries are plain text."""
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html_lib.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def fetch_articles(source: dict) -> list:
     articles = []
     try:
@@ -61,9 +81,11 @@ def fetch_articles(source: dict) -> list:
             title = entry.get("title", "").strip()
             link  = entry.get("link",  "").strip()
             if title and link:
+                raw_summary = entry.get("summary", "") or entry.get("description", "")
                 articles.append({
                     "title":           title,
                     "link":            link,
+                    "summary":         _strip_html(raw_summary)[:600],
                     "source":          source["name"],
                     "lean":            source["lean"],
                     "also_covered_by": [],
@@ -110,7 +132,7 @@ def build_pdf(articles: list, output_path: str) -> None:
     pdf.add_page()
 
     pdf.set_font("Helvetica", "B", 20)
-    pdf.cell(0, 12, "Balanced News Digest", ln=True, align="C")
+    pdf.cell(0, 12, "Daily Balanced News", ln=True, align="C")
     pdf.set_font("Helvetica", "", 10)
     stamp = datetime.now().strftime("%Y-%m-%d  %H:%M")
     pdf.cell(0, 7, f"{stamp}   |   {len(articles)} unique stories", ln=True, align="C")
@@ -165,8 +187,9 @@ def _section(lean: str, articles: list) -> str:
         also = ""
         if a["also_covered_by"]:
             also = f'<p class="also">Also covered by: {", ".join(a["also_covered_by"])}</p>'
+        summary_attr = a.get("summary", "").replace('"', "&quot;")
         items += f"""
-        <div class="article">
+        <div class="article" data-summary="{summary_attr}">
           <span class="source">{a["source"]}</span>
           <a href="{a["link"]}" target="_blank" rel="noopener">{a["title"]}</a>
           {also}
@@ -180,9 +203,9 @@ def build_html(articles: list, output_path: str) -> None:
 
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    col_left        = _section("left",         grouped)
-    col_center      = _section("center",       grouped)
-    col_right       = _section("right",        grouped)
+    col_left         = _section("left",         grouped)
+    col_center       = _section("center",       grouped)
+    col_right        = _section("right",        grouped)
     col_center_left  = _section("center-left",  grouped)
     col_center_right = _section("center-right", grouped)
 
@@ -191,11 +214,11 @@ def build_html(articles: list, output_path: str) -> None:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Balanced News Digest</title>
+  <title>Daily Balanced News</title>
   <style>
     body {{ font-family: sans-serif; margin: 0; padding: 1rem; }}
     h1 {{ text-align: center; }}
-    .meta {{ text-align: center; color: #555; margin-bottom: 2rem; }}
+    .meta {{ text-align: center; color: #555; margin-bottom: 1.25rem; }}
     h2 {{ padding: 6px 12px; border-radius: 4px; font-size: 1rem; margin-top: 0; }}
     .article {{ margin: 0.75rem 0 0.75rem 0.5rem; }}
     .source {{ display: block; font-size: 0.75rem; font-weight: bold; color: #444; }}
@@ -214,22 +237,89 @@ def build_html(articles: list, output_path: str) -> None:
       gap: 1.5rem;
     }}
     .col {{ min-width: 0; }}
+
+    /* ── Search bar ── */
+    .search-wrap {{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }}
+    .search-wrap input {{
+      width: 100%;
+      max-width: 520px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #bbb;
+      border-radius: 999px;
+      outline: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }}
+    .search-wrap input:focus {{
+      border-color: #0046b8;
+      box-shadow: 0 0 0 3px rgba(0,70,184,0.15);
+    }}
+    #search-status {{
+      text-align: center;
+      color: #666;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      min-height: 1.2em;
+    }}
   </style>
 </head>
 <body>
-  <h1>Balanced News Digest</h1>
+  <h1>Daily Balanced News</h1>
   <p class="meta">{stamp} &nbsp;|&nbsp; {len(articles)} unique stories</p>
 
-  <div class="three-col">
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="Search topics from the daily feeds below" autocomplete="off">
+  </div>
+  <p id="search-status"></p>
+
+  <div id="grid-top" class="three-col">
     <div class="col">{col_left}</div>
     <div class="col">{col_center}</div>
     <div class="col">{col_right}</div>
   </div>
 
-  <div class="two-col">
+  <div id="grid-bottom" class="two-col">
     <div class="col">{col_center_left}</div>
     <div class="col">{col_center_right}</div>
   </div>
+
+  <script>
+    const input  = document.getElementById('search');
+    const status = document.getElementById('search-status');
+
+    input.addEventListener('input', function () {{
+      const raw   = this.value.trim();
+      const terms = raw.toLowerCase().split(/\s+/).filter(Boolean);
+
+      let visible = 0;
+
+      document.querySelectorAll('.article').forEach(function (card) {{
+        const title   = (card.querySelector('a') || {{}}).textContent || '';
+        const summary = card.dataset.summary || '';
+        const haystack = (title + ' ' + summary).toLowerCase();
+        const match = terms.length === 0 || terms.every(function (t) {{
+          return haystack.includes(t);
+        }});
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      }});
+
+      // Hide lean sections that have no visible articles
+      document.querySelectorAll('section').forEach(function (sec) {{
+        const any = Array.from(sec.querySelectorAll('.article'))
+                        .some(function (c) {{ return c.style.display !== 'none'; }});
+        sec.style.display = any ? '' : 'none';
+      }});
+
+      status.textContent = terms.length === 0
+        ? ''
+        : visible + ' stor' + (visible === 1 ? 'y' : 'ies') + ' matching "' + raw + '"';
+    }});
+  </script>
 </body>
 </html>"""
 
