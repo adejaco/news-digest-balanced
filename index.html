@@ -3,11 +3,12 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRMRK1ZN78"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BRMRK1ZN78');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-BRMRK1ZN78');
 </script>
 <head>
   <meta charset="UTF-8">
@@ -106,6 +107,11 @@
       font-weight: 700;
       letter-spacing: 0.6px;
       color: #64748b;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .sp-item:hover {
+      color: #2563eb;
     }
     .sp-dot {
       width: 9px;
@@ -213,7 +219,7 @@
 
   <header>
     <h1>Daily Balanced News</h1>
-    <p class="header-meta">2026-05-19 10:54 &nbsp;&bull;&nbsp; 195 unique stories across the political spectrum</p>
+    <p class="header-meta">2026-05-19 14:20 &nbsp;&bull;&nbsp; 187 unique stories across the political spectrum</p>
   </header>
 
   <div class="search-bar">
@@ -226,11 +232,36 @@
     <p id="search-status"></p>
   </div>
 
-  <div class="spectrum"><span class="sp-item"><span class="sp-dot" style="background:rgb(120,160,220)"></span>LEFT</span><span class="sp-item"><span class="sp-dot" style="background:rgb(160,190,230)"></span>CENTER-LEFT</span><span class="sp-item"><span class="sp-dot" style="background:rgb(180,180,180)"></span>CENTER</span><span class="sp-item"><span class="sp-dot" style="background:rgb(230,190,160)"></span>CENTER-RIGHT</span><span class="sp-item"><span class="sp-dot" style="background:rgb(220,150,150)"></span>RIGHT</span></div>
+  <div class="spectrum"><a class="sp-item" href="#center-left"><span class="sp-dot" style="background:rgb(160,190,230)"></span>CENTER-LEFT</a><a class="sp-item" href="#center-right"><span class="sp-dot" style="background:rgb(230,190,160)"></span>CENTER-RIGHT</a></div>
 
   <main>
     <div class="grid-top">
-      <div class="col-card"><section><div class="lean-header" style="background:rgb(120,160,220)">LEFT</div>
+      <div class="col-card"><section id="left"><div class="lean-header" style="background:rgb(120,160,220)">LEFT</div>
+        <div class="article" data-summary="The Pentagon estimates that it has spent upwards of $29 billion on weaponry to bomb Iran since February 28, in a war of choice that has killed at least 3,400 people in Iran and thousands more across the region. Americans, far away from the bombs, are relatively insulated from the immediate, human costs of warmaking. […]">
+          <span class="source">Mother Jones</span>
+          <a href="https://www.motherjones.com/politics/2026/05/iran-war-cost-report-americans-gas/" target="_blank" rel="noopener">How Much Are You Spending On the Iran War? $300 and Counting.</a>
+          
+        </div>
+        <div class="article" data-summary="Trump now has a slush fund to reward his devotees, but who gets a share of it is unclear. Sen. Chris Van Hollen (D-Md.): “Will individuals who assaulted Capitol Hill police officers be eligible for this fund?” Sen. Chris Coons (D-Del.) “Will you commit that none of this money will go to President Trump’s campaign […]">
+          <span class="source">Mother Jones</span>
+          <a href="https://www.motherjones.com/politics/2026/05/trump-settlement-slush-fund-blanche/" target="_blank" rel="noopener">Who Is Eligible For Trump’s Slush Fund Money? Blanche Won’t Say.</a>
+          
+        </div>
+        <div class="article" data-summary="Last summer, President Donald Trump orchestrated a primary challenge against Rep. Thomas Massie, who’d become the lone House Republican willing to occasionally stand up to the president—at least the only one who wasn’t retiring. But the race has turned into a proxy fight over, well, just about everything. It’s a referendum on Trump. It’s a […]">
+          <span class="source">Mother Jones</span>
+          <a href="https://www.motherjones.com/politics/2026/05/thomas-massie-donald-trump-a-kentucky-primary-has-become-a-maga-reality-show-from-hell/" target="_blank" rel="noopener">A Kentucky Primary Has Become a MAGA Reality Show From Hell</a>
+          
+        </div>
+        <div class="article" data-summary="If you go on TikTok looking for information about Scientology, you’ll likely encounter a young man named Gunnar Scharf, leading impassioned tours of church buildings and holding holy texts aloft. Scharf has blue eyes, spiky dirty blonde hair, a trim black vest, and an abiding passion for telling the youth just how cool, normal, and […]">
+          <span class="source">Mother Jones</span>
+          <a href="https://www.motherjones.com/politics/2026/05/scientology-recruitment-videos-tiktok-instagram/" target="_blank" rel="noopener">Scientology’s Extremely Online Pivot to Video</a>
+          
+        </div>
+        <div class="article" data-summary="This story was originally published by WIRED and is reproduced here as part of the Climate Desk collaboration. As gas prices stay stubbornly high across the country, President Donald Trump mused last week about suspending the fuel tax US consumers pay. The idea is also picking up steam in Congress, with Democratic and Republican lawmakers pushing for a gas tax holiday. […]">
+          <span class="source">Mother Jones</span>
+          <a href="https://www.motherjones.com/politics/2026/05/trump-federal-gas-tax-holiday-bad-idea-high-prices-diesel-pump-inflation-iran-strait-hormuz/" target="_blank" rel="noopener">Why a Federal Gas Tax Holiday Is a Terrible Idea</a>
+          
+        </div>
         <div class="article" data-summary="An ICE officer who allegedly shot a Minneapolis man when the Trump administration sent thousands of officers to Minnesota and lied about the series of events that led to the shooting was charged on Monday. Christian J. Castro, the officer, is charged with four counts of second-degree assault and one count of falsely reporting a […]">
           <span class="source">Mother Jones</span>
           <a href="https://www.motherjones.com/politics/2026/05/minnesota-ice-immigration-shooting-christian-castro/" target="_blank" rel="noopener">Minnesota Is Doing What the Federal Government Won’t: Holding ICE Accountable</a>
@@ -256,29 +287,9 @@
           <a href="https://www.motherjones.com/politics/2026/05/rush-hour-4-and-more-katie-miller-welcome-to-the-mediautocracy/" target="_blank" rel="noopener">“Rush Hour 4” and More Katie Miller: Welcome to the Mediautocracy.</a>
           
         </div>
-        <div class="article" data-summary="President Donald Trump dropped his $10 billion lawsuit against the Internal Revenue Service on Monday in exchange for a settlement deal to launch a $1.8 billion fund to pay claims made by his friends for purported unfair prosecution. “The machinery of government should never be weaponized against any American, and it is this Department’s intention […]">
-          <span class="source">Mother Jones</span>
-          <a href="https://www.motherjones.com/politics/2026/05/trump-irs-settlement-slush-fund-doj/" target="_blank" rel="noopener">Trump Just Gave Himself a $1.8 Billion Slush Fund to Reward His Friends</a>
-          
-        </div>
-        <div class="article" data-summary="Rep. Jim Clyburn (D-S.C.) is the first Black member of Congress elected from South Carolina since Reconstruction, and the only Black Democrat ever elected from the state. He has been elected seventeen times during his thirty-two year career and rose to become the third-ranking Democrat in the US House. His seat was drawn in 1992 to […]">
-          <span class="source">Mother Jones</span>
-          <a href="https://www.motherjones.com/politics/2026/05/alito-said-racism-was-over-southern-states-are-now-rushing-to-revive-jim-crow/" target="_blank" rel="noopener">Alito Said Racism Was Over. Southern States Are Now Rushing to Revive Jim Crow.</a>
-          
-        </div>
-        <div class="article" data-summary="This story was originally published by the Guardian and is reproduced here as part of the Climate Desk collaboration. As the United States prepares for hurricane season and a summer of record-breaking heat, experts fear the Trump administration’s cuts to climate and weather data programming could make the federal government’s weather forecasts less reliable when they are needed most. The National […]">
-          <span class="source">Mother Jones</span>
-          <a href="https://www.motherjones.com/politics/2026/05/trump-cuts-noaa-weather-data-incomplete-forecasts-reliability-extreme-weather-climate-change/" target="_blank" rel="noopener">Trump Cuts to Weather Data May Make Forecasts Less Reliable, Experts Warn</a>
-          
-        </div>
-        <div class="article" data-summary="Donald Trump’s MAGA-style celebration of the 250th anniversary of American independence ramped up Sunday with a federally funded prayer service that organizers said would “rededicate America as One Nation Under God.” “Rededicate 250,” is one of a series of events that the Trump administration is holding to mark the country’s semiquincentennial on July 4. A […]">
-          <span class="source">Mother Jones</span>
-          <a href="https://www.motherjones.com/politics/2026/05/trump-maga-freedom250-christian/" target="_blank" rel="noopener">Trump Begins Branding America’s 250th Anniversary as a Christian Celebration</a>
-          
-        </div>
-        <div class="article" data-summary="A GOP bill aiming to use $1 billion of taxpayer money to finance required security for President Donald Trump’s White House ballroom was denied in a Saturday night ruling on technical grounds. Senate Republicans attempted to include the ballroom project in a budget reconciliation bill—which also includes roughly $38 billion for ICE and $26 billion […]">
-          <span class="source">Mother Jones</span>
-          <a href="https://www.motherjones.com/politics/2026/05/1-billion-trump-ballroom-gop/" target="_blank" rel="noopener">GOP Push for $1 Billion to Fund Trump’s Ballroom Hits Roadblock</a>
+        <div class="article" data-summary="On Monday and Tuesday, Paris hosted the G7 Finance Ministers’ meeting, bringing together finance ministers and central bank governors from some of the world’s most powerful economies, alongside counterparts from Brazil, India, Kenya, South Korea, Ukraine, Syria, Qatar and the United Arab Emirates. But behind the diplomatic pageantry,and despite the G7’s call for innovative financial instruments to urgently address overlapping crises,French host Roland Lescure squandered a major opportunity. While fossil fuel companies raked in billions in profits in the first quarter of 2026 amid the South-Wes">
+          <span class="source">Common Dreams</span>
+          <a href="https://www.commondreams.org/newswire/g7-finance-ministers-let-big-oil-off-the-hook-again" target="_blank" rel="noopener">G7 Finance Ministers Let Big Oil Off the Hook Again</a>
           
         </div>
         <div class="article" data-summary="Massive Florida-based power company NextEra Energy announced today its plan to acquire Virginia’s Dominion Energy, citing the growth of A.I. data centers as the impetus for the move. In response, Public Citizen Energy Program director Tyson Slocum issued the following statement : “This absurd proposal to merge two massive, well-capitalized utilities should be dead on arrival for state and federal regulators. Household customers have everything to lose and nothing to gain by allowing two behemoths, NextEra and Dominion, to merge. “The claim that the tie-up is needed to address data center deman">
@@ -326,10 +337,25 @@
           <a href="https://www.commondreams.org/newswire/abc-learns-from-past-mistakes-takes-stronger-stance-against-carr-and-trump-s-censorship-campaign" target="_blank" rel="noopener">ABC Learns from Past Mistakes, Takes Stronger Stance Against Carr and Trump's Censorship Campaign</a>
           
         </div>
-        <div class="article" data-summary="ABC is accusing the Federal Communications Commission of violating the First Amendment and chilling press freedom, in a regulatory filing in its dispute with the FCC over whether “The View” is a bona fide news program exempt from the agency’s equal time requirement. The following can be attributed to Freedom of the Press Foundation Chief of Advocacy Seth Stern: “We commend ABC for standing up for itself and the First Amendment. The legal theories the FCC asserts against broadcast licensees are frivolous and unconstitutional, and FCC Chair Brendan Carr knows it, but he hopes broadcast licensees">
-          <span class="source">Common Dreams</span>
-          <a href="https://www.commondreams.org/newswire/fpf-commends-abc-for-fighting-back-against-fcc-censorship" target="_blank" rel="noopener">FPF commends ABC for fighting back against FCC censorship</a>
+        <div class="article" data-summary="State prosecutors in Minnesota have filed criminal charges against an ICE officer who allegedly shot a Venezuelan immigrant in north Minneapolis in January, then lied about what happened. Hennepin County Attorney Mary Moriarty announced Monday that federal agent Christian Castro will face four counts of second-degree assault and one count of falsely reporting a crime when he allegedly shot Julio Sosa-Celis through a door. Federal authorities have refused to cooperate with the investigation, as well as separate probes into the killings of Renee Good and Alex Pretti. Emilia González Avalos, exec">
+          <span class="source">Democracy Now</span>
+          <a href="http://www.democracynow.org/2026/5/19/minneapolis_ice_julio_sosa_celis" target="_blank" rel="noopener">Minnesota Officials Charge ICE Agent Who Shot Venezuelan Immigrant & Falsely Reported What Happened</a>
           
+        </div>
+        <div class="article" data-summary="President Donald Trump is asking the U.S. Supreme Court to toss two verdicts against him resulting from civil litigation brought by writer E. Jean Carroll. In 2019, the famous advice columnist published a memoir describing an encounter in the 1990s when she says Trump sexually assaulted her in a department store. When Trump denied the account, Carroll sued him and won $5 million in damages, with a unanimous New York jury finding Trump liable for sexual abuse and defamation. After Trump made disparaging remarks about Carroll, she sued him again and won a second defamation judgment for $83.3 mil">
+          <span class="source">Democracy Now</span>
+          <a href="http://www.democracynow.org/2026/5/19/e_jean_carroll_documentary" target="_blank" rel="noopener">"Ask E. Jean" Film Profiles the Woman Who Twice Sued Trump & Won, for Sexual Assault & Defamation</a>
+          
+        </div>
+        <div class="article" data-summary="Two teenage gunmen in California fatally shot three people on Monday at the Islamic Center of San Diego, the largest mosque in the city. Among the dead was a security guard — Amin Abdullah, a father of eight — whom police credit with preventing more casualties. The 17- and 18-year-old suspects were found dead from apparent self-inflicted gunshot wounds in a car near the scene. Police are investigating the attack as a hate crime. The Council on American-Islamic Relations noted the attack comes as anti-Muslim bias complaints reached their highest level since they began tracking them in 1996, wit">
+          <span class="source">Democracy Now</span>
+          <a href="http://www.democracynow.org/2026/5/19/san_diego_mosque_shooting" target="_blank" rel="noopener">3 Killed in Devastating San Diego Mosque Shooting: Linda Sarsour on Rising Anti-Muslim Hate & More</a>
+          
+        </div>
+        <div class="article" data-summary="Trump Says He Called Off “A Very Major Attack Tomorrow” to Give Iran Negotiations More Time, U.S. Imposes Entry Ban on Travelers from DRC , Uganda and South Sudan as Ebola Deaths Top 130, World Leaders Condemn Israel’s Abduction of Activists from Gaza-Bound Aid Flotilla, Teenage Attackers Kill 3 at San Diego Islamic Center in Suspected Hate Crime, Charges Filed Against ICE Officer Who Shot a Venezuelan Immigrant in Minneapolis, Report: 100,000+ Children in U.S. Have Had a Parent Detained in Immigration Crackdown, DOJ Announces $1.776B Fund to Compensate Trump Allies, EPA Proposes to Kill Drink">
+          <span class="source">Democracy Now</span>
+          <a href="http://www.democracynow.org/2026/5/19/headlines" target="_blank" rel="noopener">Headlines for May 19, 2026</a>
+          <p class="also"><span class="also-label">Also covered by:</span> Democracy Now</p>
         </div>
         <div class="article" data-summary="Donald Trump on Monday dropped his $10 billion lawsuit against the Internal Revenue Service over a leak of his personal and business tax records, a bizarre case of a sitting president suing his own government and essentially acting as both plaintiff and defendant. This comes amid reports that Trump’s Department of Justice was considering settling the case in exchange for the creation of a $1.7 billion fund to compensate victims of so-called weaponization of the DOJ under the Biden and Obama administrations. Trump allies who participated in the January 6, 2021, attack on the Capitol could file ">
           <span class="source">Democracy Now</span>
@@ -346,11 +372,6 @@
           <a href="http://www.democracynow.org/2026/5/18/ebola_hantavirus" target="_blank" rel="noopener">As WHO Declares Ebola Outbreak a Global Health Emergency, Did USAID Cuts Worsen the Crisis?</a>
           
         </div>
-        <div class="article" data-summary="Trump Escalates Threats Against Iran as Ceasefire Negotiations Remain Deadlocked, Israel Kills at Least Six People in Southern Lebanon, Including Three Paramedics, Israel Assassinates Izz al-Din al-Haddad, the Head of Hamas’s Military Wing, Israeli Cabinet Approves Plans to Build Military Compound at Former UNRWA Site, Israeli Forces Begin Intercepting Ships with the Global Sumud Flotilla, World Health Organization Declares Ebola Outbreak a Global Health Emergency, GOP Senator Cassidy Loses Primary After Trump Backs His Opponent, New Financial Disclosures Show Trump Made Between $220M and $750">
-          <span class="source">Democracy Now</span>
-          <a href="http://www.democracynow.org/2026/5/18/headlines" target="_blank" rel="noopener">Headlines for May 18, 2026</a>
-          <p class="also"><span class="also-label">Also covered by:</span> Democracy Now</p>
-        </div>
         <div class="article" data-summary="We speak to two prominent Israeli thinkers, historian Omer Bartov and journalist Gideon Levy, about the founding beliefs of Zionism. Bartov, a professor of Holocaust and genocide studies at Brown University, is the author of the new book Israel: What Went Wrong? Bartov says the early Zionist movement had liberatory intentions, aiming to emancipate the persecuted Jewish minority in Europe and modeling itself after other contemporary ethnonationalist movements. He then argues that while Israel had the opportunity to “become a normal state” and “issue a constitution that would provide equality to">
           <span class="source">Democracy Now</span>
           <a href="http://www.democracynow.org/2026/5/15/omer_bartov_gideon_levy_israel_zionism" target="_blank" rel="noopener">"Israel: What Went Wrong?": Holocaust Scholar Omer Bartov & Haaretz's Gideon Levy Debate Zionism</a>
@@ -360,37 +381,32 @@
           <span class="source">Democracy Now</span>
           <a href="http://www.democracynow.org/2026/5/15/muhammad_shehada_nakba_day_gaza_palestinians" target="_blank" rel="noopener">Nakba Day: Muhammad Shehada on Israel's Ethnic Cleansing in Gaza & Ongoing Palestinian Resilience</a>
           
-        </div>
-        <div class="article" data-summary="We speak with the acclaimed artist and author Molly Crabapple about her new book, Here Where We Live Is Our Country: The Story of the Jewish Bund . Although largely forgotten today, the Jewish Labor Bund was once a powerful secular, socialist revolutionary party that fought for freedom and dignity for Jews in Europe. The movement formed in the waning days of the Russian Empire in an atmosphere of intense antisemitism, but it “rejected, from the very start, calls to create a Jewish ethnostate in Palestine,” Crabapple says. “They felt that Zionism was a capitulation to the same bigots that wante">
-          <span class="source">Democracy Now</span>
-          <a href="http://www.democracynow.org/2026/5/14/the_bund_crabapple" target="_blank" rel="noopener">"Here Where We Live Is Our Country”: Molly Crabapple on Resurfacing the Jewish History of Anti-Zionism</a>
-          
-        </div>
-        <div class="article" data-summary="U.S. President Donald Trump is in Beijing for a highly anticipated summit with his Chinese counterpart President Xi Jinping. It is the first U.S. state visit to China since 2017, during Trump’s first administration. Trade, the Iran war, artificial intelligence and the fate of Taiwan are some of the issues being discussed, although it’s not clear if any new agreements are likely. Trump traveled to China with Secretary of State Marco Rubio, Defense Secretary Pete Hegseth and Treasury Secretary Scott Bessent, along with a delegation of top U.S. executives including Apple CEO Tim Cook, Elon Musk o">
-          <span class="source">Democracy Now</span>
-          <a href="http://www.democracynow.org/2026/5/14/us_china" target="_blank" rel="noopener">Xi Warns Trump of Potential "Conflict" over Taiwan in Beijing Summit on Iran, Trade, Tech & More</a>
-          
         </div></section></div>
-      <div class="col-card"><section><div class="lean-header" style="background:rgb(180,180,180)">CENTER</div>
-        <div class="article" data-summary="Three adults were killed in a shooting at the Islamic Center of San Diego on Monday, the San Diego Police Department said.">
-          <span class="source">ABC News</span>
-          <a href="https://abcnews.com/US/active-shooter-reported-islamic-center-san-diego-police/story?id=133081988" target="_blank" rel="noopener">3 adults killed in shooting at Islamic Center of San Diego; both suspects dead</a>
-          
-        </div>
+      <div class="col-card"><section id="center"><div class="lean-header" style="background:rgb(180,180,180)">CENTER</div>
         <div class="article" data-summary="24/7 coverage of breaking news and live events">
           <span class="source">ABC News</span>
-          <a href="https://abcnews.com/video/41463246/" target="_blank" rel="noopener">LIVE:  ABC News Live</a>
+          <a href="https://abcnews.com/video/41463246/" target="_blank" rel="noopener">LIVE:  Vice President Vance holds White House press briefing</a>
           
         </div>
-        <div class="article" data-summary="Democrats are trying to flip four GOP-held House seats in the Keystone State.">
+        <div class="article" data-summary="Three men, one of whom was a security guard, were killed in a shooting at the Islamic Center of San Diego on Monday, authorities said.">
           <span class="source">ABC News</span>
-          <a href="https://abcnews.com/Politics/pennsylvania-key-winning-congress-primaries-set-key-races/story?id=132964452" target="_blank" rel="noopener">Pennsylvania primaries to set up key House races, midterm election battles</a>
+          <a href="https://abcnews.com/US/san-diego-islamic-center-shooting-suspects/story?id=133100694" target="_blank" rel="noopener">What to know about the San Diego Islamic Center shooting suspects</a>
           
         </div>
-        <div class="article" data-summary="Three Finnish divers will attempt to recover the bodies of two of the four Italians who died deep inside an underwater cave in an atoll in the Maldives">
+        <div class="article" data-summary="Nashville will host the Super Bowl in 2030 at the new Nissan Stadium, the first time &quot;Music City&quot; has hosted the event.">
           <span class="source">ABC News</span>
-          <a href="https://abcnews.com/International/wireStory/finnish-divers-recover-2-dead-italians-underwater-cave-133098109" target="_blank" rel="noopener">Divers will try to recover 2 of the dead Italians from an Maldives underwater cave</a>
-          <p class="also"><span class="also-label">Also covered by:</span> CBS News, New York Post</p>
+          <a href="https://abcnews.com/GMA/Culture/nashville-host-super-bowl-lxiv-2030/story?id=133116855" target="_blank" rel="noopener">Nashville to host Super Bowl LXIV in 2030</a>
+          
+        </div>
+        <div class="article" data-summary="NBA legend John Starks gives a superfan tickets to Game 1 of the Eastern Conference finals, where the New York Knicks take on the Cleveland Cavaliers.">
+          <span class="source">ABC News</span>
+          <a href="https://abcnews.com/video/133101326/" target="_blank" rel="noopener">WATCH:  Knicks superfan gets surprise tickets</a>
+          
+        </div>
+        <div class="article" data-summary="Geno Mueller survived a stroke after his father quickly recognized the warning signs and got him lifesaving help.">
+          <span class="source">ABC News</span>
+          <a href="https://abcnews.com/video/133104971/" target="_blank" rel="noopener">WATCH:  7-year-old stroke survivor saved after dad spots warning signs</a>
+          
         </div>
         <div class="article" data-summary="ESPN's Mike Breen profiles a man in Wisconsin who calls New York Knicks games from his living room to make his sister smile following her traumatic brain injury.">
           <span class="source">ABC News</span>
@@ -412,64 +428,79 @@
           <a href="https://abcnews.com/video/133062406/" target="_blank" rel="noopener">WATCH:  Female welder makes history amid push toward trades</a>
           
         </div>
-        <div class="article" data-summary="A spokesperson for the Navy said all four air crew had successfully ejected and that the incident is under investigation.">
-          <span class="source">ABC News</span>
-          <a href="https://abcnews.com/video/133063142/" target="_blank" rel="noopener">WATCH:  2 fighter jets collide midair at Idaho Air Force base air show</a>
-          
-        </div>
-        <div class="article" data-summary="ABC News' Danny New has the dirt on a citywide treasure hunt playing out in San Francisco.">
-          <span class="source">ABC News</span>
-          <a href="https://abcnews.com/video/133061956/" target="_blank" rel="noopener">WATCH:  Citywide treasure hunt digs up backlash</a>
-          
-        </div>
-        <div class="article" data-summary="A bear mauled to death a man at Vitosha, a mountainous region just outside the Bulgarian capital of Sofia, authorities said.">
+        <div class="article" data-summary="President Trump says he scrapped a planned attack on Iran at the request of Gulf allies as &quot;serious negotiations&quot; on a peace deal are underway.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/man-killed-bear-with-cub-bulgaria/" target="_blank" rel="noopener">Man killed by mother bear with her cub in rare attack in Bulgaria</a>
-          
-        </div>
-        <div class="article" data-summary="Russia's army has started three days of nuclear weapons drills involving thousands of troops across the country, as Kyiv escalates its drone attacks and with President Vladimir Putin headed to China.">
-          <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/russia-nuclear-drills-major-3-days/" target="_blank" rel="noopener">Russia conducting 3 days of major nuclear drills</a>
-          
-        </div>
-        <div class="article" data-summary="Voters are going to the polls Tuesday for primaries in several states, including the most expensive House primary in history.">
-          <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/2026-midterm-elections-primaries-kentucky-georgia-pennsyvlania-alabama-idaho/" target="_blank" rel="noopener">What to know about today's primaries in Georgia, Kentucky and more</a>
-          
+          <a href="https://www.cbsnews.com/live-updates/iran-war-trump-peace-deal-attack-possible/" target="_blank" rel="noopener">Trump says he was "an hour away" from striking Iran</a>
+          <p class="also"><span class="also-label">Also covered by:</span> CBS News, CNBC</p>
         </div>
         <div class="article" data-summary="The virus behind the latest Ebola outbreak is the Bundibugyo virus, which is less common and there is no vaccine or treatment.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/ebola-outbreak-bundibugyo-congo-uganda-vaccine-treatment-symptoms/" target="_blank" rel="noopener">Ebola death toll in Congo rises to 131 as concern mounts</a>
+          <a href="https://www.cbsnews.com/news/ebola-outbreak-bundibugyo-congo-uganda-vaccine-treatment-symptoms/" target="_blank" rel="noopener">Ebola strain in latest outbreak has no vaccine or treatment</a>
           
         </div>
-        <div class="article" data-summary="An American medical missionary in the Democratic Republic of the Congo has a confirmed case of Ebola, and is being taken to Germany for treatment.">
+        <div class="article" data-summary="Acting Attorney General Todd Blanche faced tough questions from senators Tuesday on a number of different issues. CBS News congressional correspondent Nikole Killion has more.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/american-doctor-ebola-congo-missionary/" target="_blank" rel="noopener">American doctor working in Congo tests positive for Ebola</a>
+          <a href="https://www.cbsnews.com/video/early-takeaways-from-blanche-testimony-on-epstein-anti-weaponization-fund/" target="_blank" rel="noopener">Early takeaways from Blanche Senate testimony on Epstein, "anti-weaponization fund"</a>
           
         </div>
-        <div class="article" data-summary="The Trump administration announced it's restricting people who don't have U.S. passports from entering the country if they have been in Congo, South Sudan or Uganda amid the Ebola outbreak.">
+        <div class="article" data-summary="Buyers can still find lower-cost homes in some midsize cities, especially across the Rust Belt and Sun Belt, a new analysis finds.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/us-ebola-travel-restrictions-outbreak-congo-uganda/" target="_blank" rel="noopener">U.S. announces Ebola-related travel restrictions amid outbreak in Congo, Uganda</a>
+          <a href="https://www.cbsnews.com/news/most-affordable-cities-buy-home/" target="_blank" rel="noopener">The 10 most affordable U.S. cities to buy a home</a>
           
         </div>
-        <div class="article" data-summary="An uptick in people skipping Obamacare premium payments in many states suggests the Affordable Care Act's rising costs are hitting home for 2026 enrollees.">
+        <div class="article" data-summary="Investigators are looking into Chinese firms that allegedly slowed shipping container production in 2019, just before the COVID-19 pandemic erupted. CBS News' Jake Rosen has more.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/aca-enrollment-healthcare-insurance-rates/" target="_blank" rel="noopener">Eroding ACA enrollment portends higher insurance rates</a>
+          <a href="https://www.cbsnews.com/video/whether-chinese-companies-cut-shipping-container-production-before-covid-19-pandemic/" target="_blank" rel="noopener">U.S. probing whether Chinese companies cut shipping container production before COVID-19 pandemic</a>
           
         </div>
-        <div class="article" data-summary="President Trump had warned Sunday that &quot;the Clock is Ticking&quot; for Iran to accept a peace agreement.">
+        <div class="article" data-summary="Many Americans are signaling disapproval of the technology amid fears that it will eclipse already competitive entry-level jobs.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/live-updates/iran-war-trump-warning-oil-stock-prices-futures-ceasefire-diplomacy/" target="_blank" rel="noopener">Trump calls off attack on Iran amid "serious negotiations" toward peace deal</a>
+          <a href="https://www.cbsnews.com/news/ai-backlash-college-commencements-2026/" target="_blank" rel="noopener">AI sparks backlash from new graduates. How deep does the disapproval go?</a>
           
         </div>
-        <div class="article" data-summary="New York Gov. Kathy Hochul said the MTA and LIRR unions reached &quot;a fair deal&quot; to end the strike after three days.">
+        <div class="article" data-summary="President Trump is pulling no punches as he backs former Navy SEAL Ed Gallrein against incumbent GOP Rep. Thomas Massie in the primary for Kentucky's 4th Congressional District. CBS News White House reporter Aaron Navarro has more.">
           <span class="source">CBS News</span>
-          <a href="https://www.cbsnews.com/news/lirr-strike-mta-unions-tentative-agreement-hochul/" target="_blank" rel="noopener">LIRR strike ends as MTA, unions reach tentative agreement</a>
+          <a href="https://www.cbsnews.com/video/breaking-down-the-heated-massie-gallrein-primary-race-in-kentucky/" target="_blank" rel="noopener">Breaking down the heated Massie-Gallrein primary race in Kentucky</a>
           
         </div>
-        <div class="article" data-summary="Home Depot beat Wall Street's expectations on the top and bottom lines, even as some shoppers pulled back on larger projects.">
+        <div class="article" data-summary="Voters are heading to the polls in Alabama for key primary races following the Supreme Court's recent decision on Louisiana's congressional map. CBS News reporter Shawna Mizellle has more.">
+          <span class="source">CBS News</span>
+          <a href="https://www.cbsnews.com/video/alabama-primaries-heat-up-supreme-courts-map-decision/" target="_blank" rel="noopener">Alabama primaries heat up following Supreme Court's redistricting decision</a>
+          
+        </div>
+        <div class="article" data-summary="Global bond markets remain on edge as traders monitor central bank responses to renewed inflation fears.">
           <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/19/home-depot-hd-q1-2026-earnings.html" target="_blank" rel="noopener">Home Depot says core shopper is resilient in the face of higher gas prices, sales rise 5%</a>
+          <a href="https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html" target="_blank" rel="noopener">30-year Treasury yield tops 5.19%, highest since before the financial crisis</a>
+          
+        </div>
+        <div class="article" data-summary="Mortgage rates continued to move higher Tuesday on uncertainty over the war with Iran. They are at the highest level since last July.">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/mortgage-rates-closing-in-on-7percent.html" target="_blank" rel="noopener">Mortgage rates surge to highest level since July</a>
+          
+        </div>
+        <div class="article" data-summary="Google made a number of AI announcements at its annual developer conference, rolling out more-advanced models and agentic tools for its expansive user base.">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html" target="_blank" rel="noopener">Google debuts new AI models, personal AI agents in effort to keep pace with OpenAI and Anthropic</a>
+          
+        </div>
+        <div class="article" data-summary="Paxton and Cornyn are locked in a bitter Texas Senate runoff that will decide which Republican faces Democrat James Talarico in November.">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/trump-primary-election-ken-paxton-john-cornyn-texas-senate.html" target="_blank" rel="noopener">Trump flexes endorsement power for Ken Paxton after ousting Cassidy, targeting Massie</a>
+          
+        </div>
+        <div class="article" data-summary="Businesses in the Middle East bought insurance that protects against terrorism or sabotage, but far fewer purchased coverage explicitly designed to cover &quot;war.&quot;">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/trump-says-its-not-a-war-insurers-with-money-on-the-line-say-it-is.html" target="_blank" rel="noopener">Trump says it's not a 'war.' Insurers with money on the line say it is</a>
+          
+        </div>
+        <div class="article" data-summary="Andrej Karpathy, an artificial intelligence researcher who co-founded OpenAI before getting poached by Tesla, said he's joining Anthropic.">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html" target="_blank" rel="noopener">Anthropic hires OpenAI co-founder Andrej Karpathy, former Tesla AI leader</a>
+          
+        </div>
+        <div class="article" data-summary="Acting Attorney General Todd Blanche would not rule out Jan. 6 rioters receiving payouts from Trump’s new DOJ &quot;anti-weaponization&quot; fund.">
+          <span class="source">CNBC</span>
+          <a href="https://www.cnbc.com/2026/05/19/trump-doj-irs-fund-blanche-payouts-jan-6-rioters.html" target="_blank" rel="noopener">Blanche won't rule out Jan. 6 rioters getting Trump DOJ fund payouts</a>
           
         </div>
         <div class="article" data-summary="AI-driven hiring slowdowns are hitting some entry-level jobs for college graduates as companies like Ford and AT&T ramp up recruiting for skilled trade workers.">
@@ -481,86 +512,61 @@
           <span class="source">CNBC</span>
           <a href="https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-full-list-companies.html" target="_blank" rel="noopener">2026 CNBC Disruptor 50: See the full list of companies, rankings, and a new leader in the AI race</a>
           
-        </div>
-        <div class="article" data-summary="The CDC earlier Monday said an American had tested positive for Ebola in Africa.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/18/trump-ebola-virus-concerned-africa.html" target="_blank" rel="noopener">Trump says he's 'concerned' about Ebola after American tests positive in Africa</a>
-          
-        </div>
-        <div class="article" data-summary="The selloff came as the outbreak of the U.S.-Iran conflict and resulting surge in crude oil prices sent the Japanese yen and other Asian currencies tumbling.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/19/central-banks-offload-us-treasuries-china-holdings-at-18-year-low.html" target="_blank" rel="noopener">Japan, China lead foreign government retreat from U.S. Treasurys as Gulf War fallout stokes currency fears</a>
-          
-        </div>
-        <div class="article" data-summary="Trump said he is increasing the number of products on the platform by nearly seven times, adding more than 600 generic drugs to the site.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/18/white-house-adds-generic-drugs-to-direct-to-consumer-trumprx-site.html" target="_blank" rel="noopener">White House adds generic drugs to direct-to-consumer TrumpRx site</a>
-          
-        </div>
-        <div class="article" data-summary="After a 140% stock surge and a sweeping Wall Street reset, Google’s developer conference has to prove the AI story is more than a market narrative.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/18/google-i-o-alphabet-ai-wall-street.html" target="_blank" rel="noopener">Google I/O primer: Alphabet's AI showcase is its chance to wow Wall Street</a>
-          
-        </div>
-        <div class="article" data-summary="The comments come after a fresh wave of U.S. sanctions and amid mounting speculation that the U.S. could carry out military strikes against Cuba.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/19/cuba-us-sanctions-military-fraudulent-case.html" target="_blank" rel="noopener">Cuba condemns U.S. sanctions, accuses Washington of building ‘fraudulent case’ for military action</a>
-          
-        </div>
-        <div class="article" data-summary="Anthropic sued the Defense Department in March after the agency declared the artificial intelligence startup a supply chain risk.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/19/anthropic-dod-blacklist-court-opening-arguments.html" target="_blank" rel="noopener">Anthropic and U.S. government to face off in DC court over blacklisting of AI company</a>
-          
-        </div>
-        <div class="article" data-summary="Anthropic, posting explosive growth for its powerful AI systems that enterprises trust, has leapfrogged OpenAI on the CNBC Disruptor 50 list as the new No. 1.">
-          <span class="source">CNBC</span>
-          <a href="https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-anthropic-no-1.html" target="_blank" rel="noopener">2026 CNBC Disruptor 50 list: Why Anthropic was No. 1 in this year's rankings</a>
-          
         </div></section></div>
-      <div class="col-card"><section><div class="lean-header" style="background:rgb(220,150,150)">RIGHT</div>
-        <div class="article" data-summary="When Australian farmer Rhys Smoker announced he’d found a live frog in a bag of lettuce, his housemates didn’t believe him.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/world-news/lettuce-introduce-you-to-the-live-frog-found-in-this-grocery-store-salad-bag/" target="_blank" rel="noopener">Lettuce introduce you to the live frog found in a grocery store salad bag</a>
+      <div class="col-card"><section id="right"><div class="lean-header" style="background:rgb(220,150,150)">RIGHT</div>
+        <div class="article" data-summary="War Secretary Pete Hegseth took a break from his official duties to appear alongside Kentucky congressional candidate Ed Gallrein during a Monday campaign appearance ahead of his Tuesday primary challenge against incumbent Rep. Thomas Massie (R-KY). The post Pete Hegseth Campaigns with Thomas Massie Challenger Ed Gallrein: ‘Trump Needs Reinforcements’ appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/politics/2026/05/19/pete-hegseth-campaigns-with-thomas-massie-challenger-ed-gallrein-trump-needs-reinforcements/" target="_blank" rel="noopener">Pete Hegseth Campaigns with Thomas Massie Challenger Ed Gallrein: 'Trump Needs Reinforcements'</a>
           
         </div>
-        <div class="article" data-summary="The head of the World Health ​Organization expressed deep concern on Tuesday at the speed ‌and scale of the Ebola outbreak, as the number of cases rises.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/world-news/who-chief-concerned-at-speed-and-scale-of-ebola-outbreak/" target="_blank" rel="noopener">WHO chief concerned at speed and scale of Ebola outbreak</a>
+        <div class="article" data-summary="President Donald Trump said on Monday he was “concerned” about the Ebola outbreak in the Democratic Republic of the Congo (DRC), because it could have a “breakout” beyond the current infection area. The post Trump ‘Concerned’ About Congo Ebola Outbreak as Fatalities Rise to 131 appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/africa/2026/05/19/trump-concerned-about-congo-ebola-outbreak-as-fatalities-rise-to-131/" target="_blank" rel="noopener">Trump ‘Concerned’ About Congo Ebola Outbreak as Fatalities Rise to 131</a>
           
         </div>
-        <div class="article" data-summary="Isak Andic's son, Jonathan Andic, who took over the global fashion empire in the wake of his dad's death, was detained for questioning in Barcelona as part of the possible homicide probe, local cops said.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/world-news/mango-fashion-tycoons-son-arrested-over-his-dads-sudden-cliff-fall-death/" target="_blank" rel="noopener">Mango fashion tycoon’s son arrested over his dad’s cliff fall death</a>
+        <div class="article" data-summary="Iran recently sent an updated peace proposal to America via Pakistani mediators, the Foreign Ministry confirmed on Monday, which reportedly includes demands for &quot;reparations&quot; and no meaningful concessions on the country's illicit nuclear activity. The post Report: Iran Sends U.S. Revamped ‘Peace Proposal’ Demanding Reparations, No Nuclear Limits appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/middle-east/2026/05/19/report-iran-sends-u-s-revamped-peace-proposal-demanding-reparations-no-nuclear-limits/" target="_blank" rel="noopener">Report: Iran Sends U.S. Revamped 'Peace Proposal' Demanding Reparations, No Nuclear Limits</a>
           
         </div>
-        <div class="article" data-summary="A woman is dead after she fell into an open manhole in Midtown Monday night, police said.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/us-news/woman-falls-into-open-manhole-in-midtown-dies-from-her-injuries-nypd/" target="_blank" rel="noopener">Woman dies after falling into open manhole in Midtown: NYPD</a>
+        <div class="article" data-summary="A federal jury in Oakland, California, ruled against Elon Musk on Monday in his high-profile lawsuit against OpenAI and CEO Sam Altman, finding that his claims were filed beyond the statute of limitations. A defiant Musk blamed the loss on a &quot;calendar technicality&quot; and vowed to appeal the decision. The post Defiant Elon Musk Blames Legal Loss Against OpenAI on ‘Technicality,’ Vows Appeal appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/tech/2026/05/19/defiant-elon-musk-blames-legal-loss-against-openai-on-technicality-vows-appeal/" target="_blank" rel="noopener">Defiant Elon Musk Blames Legal Loss Against OpenAI on 'Technicality,' Vows Appeal</a>
           
         </div>
-        <div class="article" data-summary="What Lafrenière has shown through his first six NHL seasons pales in comparison to his counterparts who went No. 1 in the years before and after him.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/sports/why-giving-alexis-lafreniere-bigger-rangers-role-is-complicated/" target="_blank" rel="noopener">What makes giving Alexis Lafrenière a bigger Rangers role so complicated</a>
+        <div class="article" data-summary="Actor Sebastian Stan, who previously played a young Donald Trump during his ascendance in the late 70s and 80s in The Apprentice movie, holds the man now in the White House beneath contempt and aired his doom-laden views Tuesday at the Cannes Film Festival. The post Sebastian Stan Goes Doomer at Cannes: ‘We’re in a Really Bad Place’ Because of Trump — ‘Not a Laughing Matter’ appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/entertainment/2026/05/19/sebastian-stan-despairs-america-under-trump-is-not-a-laughing-matter-were-in-a-really-bad-place/" target="_blank" rel="noopener">Sebastian Stan Goes Doomer at Cannes: 'We're in a Really Bad Place' Because of Trump -- 'Not a Laughing Matter'</a>
           
         </div>
-        <div class="article" data-summary="American Federation of Teachers boss Randi Weingarten tapped hundreds of thousands in union resources to help write her controversial book -- working with a team that raked in more than $1.4 million from the labor group, a new analysis found.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/us-news/aft-boss-randi-weingarten-tapped-union-resources-worth-over-1-4m-to-write-manifesto-book/" target="_blank" rel="noopener">AFT boss Randi Weingarten tapped  union resources worth over $1.4M to write ‘manifesto’ book</a>
+        <div class="article" data-summary="Socialist New York City Mayor Zohran Mamdani is previewing his plans for opening city-run grocery stores, claiming that he is bringing &quot;cheaper&quot; groceries to all five boroughs by 2029. The post Socialist NYC Mayor Mamdani Previews Plans for City-Owned Grocery Stores appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/politics/2026/05/19/socialist-nyc-mayor-mamdani-previews-plans-for-city-owned-grocery-stores/" target="_blank" rel="noopener">Socialist NYC Mayor Mamdani Previews Plans for City-Owned Grocery Stores</a>
           
         </div>
-        <div class="article" data-summary="Teacher union honcho Randi Weingarten’s 2025 vanity book “Why Fascists Fear Teachers” isn’t just a self-promoting, self-glorifying soliloquy.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/opinion/turns-out-randi-weingartens-self-promoting-book-was-a-big-scam-all-along/" target="_blank" rel="noopener">Turns out Randi Weingarten’s self-promoting ‘book’ was a big scam all along</a>
+        <div class="article" data-summary="The religion that &quot;formed the American consciousness&quot; was &quot;decidedly Christian, founded upon the principles and the divinity of Jesus Christ,&quot; Vice President JD Vance said. The post JD Vance on ‘Rededicate 250’: Religion that Formed American Consciousness Founded on Principles and Divinity of Jesus Christ appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/politics/2026/05/19/jd-vance-rededicate-250-religion-that-formed-american-consciousness-founded-on-principles-and-divinity-jesus-christ/" target="_blank" rel="noopener">JD Vance on 'Rededicate 250': Religion that Formed American Consciousness Founded on Principles and Divinity of Jesus Christ</a>
           
         </div>
-        <div class="article" data-summary="Two men and a woman are wanted over a Kentucky shooting where a dad was shot 15 times at point blank range.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/us-news/two-men-woman-wanted-over-kentucky-shooting-where-dad-was-shot-15-times-at-point-blank-range/" target="_blank" rel="noopener">Two men, woman wanted over Kentucky shooting where father was shot 15 times at point blank range — and lived</a>
+        <div class="article" data-summary="Mexico’s financial enforcement groups moved to freeze the assets of Sinaloa’s governor and nine of his closest allies who are wanted on drug charges in the U.S. President Claudia Sheinbaum, however, was quick to defend his innocence, claiming that the move was not the result of an investigation in Mexico. The post Mexico Freezes Accounts of Governor Wanted in U.S. on Drug Charges, President Sheinbaum Defends His Innocence appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/border/2026/05/19/mexico-freezes-accounts-of-governor-wanted-in-u-s-on-drug-charges-mexican-president-defends-his-innocence/" target="_blank" rel="noopener">Mexico Freezes Accounts of Governor Wanted in U.S. on Drug Charges, President Sheinbaum Defends His Innocence</a>
           
         </div>
-        <div class="article" data-summary="The Santa Rosa Island wildfire is the largest that has ever burned on the island.">
-          <span class="source">New York Post</span>
-          <a href="https://nypost.com/2026/05/19/us-news/sailor-rescued-in-the-knick-of-time-as-massive-record-breaking-wildfire-engulfs-california-island/" target="_blank" rel="noopener">Sailor rescued in the knick of time as massive, record-breaking wildfire engulfs California island</a>
+        <div class="article" data-summary="Hayden Panettiere claims she was a victim of two incidents of sexual misconduct but refuses to name the guilty parties. The post Nolte: Hayden Panettiere Refuses to Name Oscar-Winner Who Exposed Himself appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/entertainment/2026/05/19/nolte-hayden-panettiere-refuses-name-oscar-winner-who-exposed-himself/" target="_blank" rel="noopener">Nolte: Hayden Panettiere Refuses to Name Oscar-Winner Who Exposed Himself</a>
+          
+        </div>
+        <div class="article" data-summary="Actress Kristen Stewart has expressed dismay with the studio system and now wants to start making movies for YouTube. The post Kristen Stewart Is Sick of Making Movies for ‘F**king Billionaires,’ Wants to Put ‘Weird S**t’ on YouTube appeared first on Breitbart .">
+          <span class="source">Breitbart</span>
+          <a href="https://www.breitbart.com/entertainment/2026/05/19/kristen-stewart-is-so-sick-of-the-studio-system-wants-to-make-youtube-movies/" target="_blank" rel="noopener">Kristen Stewart Is Sick of Making Movies for 'F**king Billionaires,' Wants to Put 'Weird S**t' on YouTube</a>
+          
+        </div>
+        <div class="article" data-summary="These women are ideologues masquerading as journalists.">
+          <span class="source">National Review</span>
+          <a href="https://www.nationalreview.com/2026/05/deranged-luigi-mangione-fans-exploit-mamdanis-press-pass-laxity/" target="_blank" rel="noopener">Deranged Luigi Mangione Fans Exploit Mamdani’s Press-Pass Laxity</a>
           
         </div>
         <div class="article" data-summary="A new proposal for compensating victims of Biden lawfare is ripe for abuse and cronyism.">
@@ -608,207 +614,207 @@
           <a href="https://www.nationalreview.com/2026/05/the-callousness-of-abortion-pills/" target="_blank" rel="noopener">The Callousness of Abortion Pills</a>
           
         </div>
-        <div class="article" data-summary="Even countries that acknowledge the IRGC is a terrorist organization are looking away. This evasion has consequences.">
-          <span class="source">National Review</span>
-          <a href="https://www.nationalreview.com/2026/05/terrorists-have-taken-over-iran-now-what/" target="_blank" rel="noopener">Terrorists Have Taken Over Iran — Now What?</a>
-          
-        </div>
-        <div class="article" data-summary="Sen. Thom Tillis (R-NC) is reportedly warning Senate Republicans that moving ahead this week with a major budget reconciliation package could keep Sen. John Cornyn (R-TX) in Washington days before his Texas Republican runoff against Attorney General Ken Paxton. The post Sen. Tillis Urges Senate to Cancel ICE, Border Patrol Vote to Boost Cornyn’s Reelection Bid appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/tillis-urges-senate-cancel-ice-border-patrol-vote-boost-cornyn-reelection-bid/" target="_blank" rel="noopener">Sen. Tillis Urges Senate to Cancel ICE, Border Patrol Vote to Boost Cornyn's Reelection Bid</a>
-          
-        </div>
-        <div class="article" data-summary="Sen. John Cornyn (R-TX) recently fell under media scrutiny for praising the American branch of Islamic Relief Worldwide (IRW), a charity that the U.S. State Department, multiple banking institutions, and several other governments have severed ties with due to concerns of terrorism and antisemitism. The post Report: Sen. Cornyn Funded Islamic Group Linked to Planned Texas Muslim Community, Terrorism, Antisemitism appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/report-cornyn-funded-islamic-group-linked-planned-texas-muslim-community/" target="_blank" rel="noopener">Report: Sen. Cornyn Funded Islamic Group Linked to Planned Texas Muslim Community, Terrorism, Antisemitism</a>
-          
-        </div>
-        <div class="article" data-summary="President Donald Trump is calling for the Senate parliamentarian to be fired after she ruled over the weekend that a plan drafted by Republican lawmakers to provide $1 billion in funding for the White House ballroom did not follow the rules. The post Report: Trump Calls for Senate Parliamentarian to Be Fired After She Nixes Ballroom Funding Plan appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/report-trump-calls-senate-parliamentarian-fired-nixes-ballroom-funding-plan/" target="_blank" rel="noopener">Report: Trump Calls for Senate Parliamentarian to Be Fired After She Nixes Ballroom Funding Plan</a>
-          
-        </div>
-        <div class="article" data-summary="At least one gunman is dead after a shooting Monday at the Islamic Center of San Diego, a report from NBC News indicated. The post Report: At Least One Suspect Down in San Diego Mosque Shooting appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/crime/2026/05/18/report-at-least-one-suspect-down-san-diego-mosque-shooting/" target="_blank" rel="noopener">Report: At Least One Suspect Down in San Diego Mosque Shooting</a>
-          
-        </div>
-        <div class="article" data-summary="On Monday’s broadcast of the Fox News Channel’s “Hannity,” DHS Secretary Markwayne Mullin stated that due to the time it took to correct for inaccurate records they received from the Biden administration, “we are just now hitting a stride to The post Mullin: ‘Just Now Hitting a Stride to Go After the Worst of the Worst’ appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/clips/2026/05/18/mullin-just-now-hitting-a-stride-to-go-after-the-worst-of-the-worst/" target="_blank" rel="noopener">Mullin: 'Just Now Hitting a Stride to Go After the Worst of the Worst'</a>
-          
-        </div>
-        <div class="article" data-summary="President Donald Trump ripped the establishment media on Monday, contending that even if Iran surrendered, outlets like the New York Times would spin it as a victory over the United States. The post Trump Rips Media over Iran Coverage: ‘They Have Gone Absolutely Crazy’ appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/trump-rips-media-over-iran-coverage/" target="_blank" rel="noopener">Trump Rips Media over Iran Coverage: 'They Have Gone Absolutely Crazy'</a>
-          
-        </div>
-        <div class="article" data-summary="President Donald Trump revealed that he had been asked by the leaders of several countries in the Middle East to &quot;hold off&quot; on a planned U.S. military attack of Iran. The post Trump Asked by Leaders of Saudi Arabia, Qatar to ‘Hold Off’ on Attack of Iran appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/trump-asked-by-leaders-of-saudi-arabia-qatar-to-hold-off-on-attack-of-iran/" target="_blank" rel="noopener">Trump Asked by Leaders of Saudi Arabia, Qatar to 'Hold Off' on Attack of Iran</a>
-          
-        </div>
-        <div class="article" data-summary="The Ronald Reagan Presidential Library in Simi Valley, California, has been evacuated after the Sandy Fire spread to over 836 acres. The post Reagan Library Evacuated as California Sandy Fire Spreads appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/politics/2026/05/18/reagan-library-evacuated-california-sandy-fire-spreads/" target="_blank" rel="noopener">Reagan Library Evacuated as California Sandy Fire Spreads</a>
-          
-        </div>
-        <div class="article" data-summary="President Donald Trump announced Monday that TrumpRx.gov is expanding the number of drugs it offers nearly sevenfold by adding 600 generics to its website. The post Trump Announces 600 Generic Drugs Added to TrumpRx appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/health/2026/05/18/trump-announces-600-generic-drugs-added-trumprx/" target="_blank" rel="noopener">Trump Announces 600 Generic Drugs Added to TrumpRx</a>
-          
-        </div>
-        <div class="article" data-summary="Tech Billionaire Eric Schmidt is rejecting any immigration compromise that would help Americans cope with the mass layoffs being caused by Artificial Intelligence technology. The post Billionaire Eric Schmidt Wants More AI Tech AND More Immigration appeared first on Breitbart .">
-          <span class="source">Breitbart</span>
-          <a href="https://www.breitbart.com/economy/2026/05/18/eric-schmidt-wants-more-ai-and-more-immigration/" target="_blank" rel="noopener">Billionaire Eric Schmidt Wants More AI Tech AND More Immigration</a>
-          
-        </div>
-        <div class="article" data-summary="The GOP civil war over Kentucky’s 4th District is coming down to the wire.">
+        <div class="article" data-summary="'We never got unhinged, but our lives did go in different directions'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/19/unfit-to-print-amber-duke-thomas-massie-ed-gallrein/" target="_blank" rel="noopener">DUKE: Massie Challenge Becomes GOP’s Marquee Primary Fight</a>
+          <a href="https://dailycaller.com/2026/05/19/boy-meets-world-wholesome-stars-william-daniels-bonnie-bartlett-open-marriage-affairs/" target="_blank" rel="noopener">‘Boy Meets World’ Star Addresses Open Marriage Rules Decades Later</a>
           
         </div>
-        <div class="article" data-summary="Alhatem branded Israel as a &quot;Zionist entity&quot; and said that men in Islam &quot;must have a principle&quot;">
+        <div class="article" data-summary="Over the course of the past several years, the healthcare industry has changed in substantial ways. As the sector has embraced new surface-level tools and technologies, many professionals have openly hoped that this could be the key ingredient to improving the U.S.’s long-struggling system. Lynn Barr, MPH, however, has a different opinion. Lynn, the founder […]">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/19/kuwait-muslim-jiu-jitsu-jassim-alhatem-israel-yoav-manor/" target="_blank" rel="noopener">‘We Do Not Respect Them At All’: Kuwaiti Muslim Jiu-Jitsu Champion Rejects Handshake From Israeli Competitor</a>
+          <a href="https://dailycaller.com/2026/05/19/inside-lynn-barrs-mission-to-transform-the-healthcare-system/" target="_blank" rel="noopener">Inside Lynn Barr’s Mission to Transform the Healthcare System</a>
           
         </div>
-        <div class="article" data-summary="In 2025, Davis graduated from West Virginia, doing so with a masters of science in sports management">
+        <div class="article" data-summary="&quot;This issue is a matter of life or death&quot;">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/sam-houston-state-william-davis-dead-22/" target="_blank" rel="noopener">Sam Houston State’s William Davis Dead At 22</a>
+          <a href="https://dailycaller.com/2026/05/19/senators-push-crackdown-ai-chatbots-amid-fears-big-tech-putting-kids-risk/" target="_blank" rel="noopener">Senators Push Crackdown On AI Chatbots Amid Fears Big Tech Putting Kids At Risk</a>
           
         </div>
-        <div class="article" data-summary="Lost opportunity?">
+        <div class="article" data-summary="'over $35 million to woke groups'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/opinion-trumps-china-trip-was-a-big-america-first-opportunity-did-he-seize-it-stacy-washington/" target="_blank" rel="noopener">Trump’s China Trip Was A Big ‘America First’ Opportunity. Did He Seize It?</a>
+          <a href="https://dailycaller.com/2026/05/19/smart-td-transportation-union-democrats-casinos-workers-american-accountability-foundation/" target="_blank" rel="noopener">EXCLUSIVE: Major Transportation Union Poured Millions Into Dem Politics, Casinos As Workers Got Sold Out, Report Finds</a>
           
         </div>
-        <div class="article" data-summary="'clear incompetence and just a lack of oversight'">
+        <div class="article" data-summary="'Hate rhetoric'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/house-oversight-interviews-tova-noel-prison-guard-epstein-alive/" target="_blank" rel="noopener">House Lawmakers Interview Alleged Last Person To See Epstein Alive</a>
+          <a href="https://dailycaller.com/2026/05/19/mosque-shooter-hispanic-neo-nazi/" target="_blank" rel="noopener">Mosque Shooter Identified As Apparent Neo-Nazi With Hispanic Name</a>
           
         </div>
-        <div class="article" data-summary="He wasn’t kidding.">
+        <div class="article" data-summary="'You're making me feel like a rapist'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/jd-vance-medicaid-fraud-task-force-doj/" target="_blank" rel="noopener">JD Vance Is Finally Crushing The Fraudsters</a>
+          <a href="https://dailycaller.com/2026/05/19/married-at-first-sight-uk-canceled-rape-sexual-assault-allegations/" target="_blank" rel="noopener">‘Married At First Sight UK’ Canceled Amid Allegations Of Rape</a>
           
         </div>
-        <div class="article" data-summary="Arround 22 minutes is all it took for all hell to break loose Sunday at the Stade de la Beaujoire">
+        <div class="article" data-summary="'I was a poster boy for luxury living'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/nantes-toulouse-fans-soccer-breach-security-storm-field/" target="_blank" rel="noopener">All Hell Breaks Loose In Nantes, Toulouse Game After Fans Breach Security, Storm Field</a>
+          <a href="https://dailycaller.com/2026/05/19/scott-borba-elf-cosmetics-abandons-fortune-wealth-becomes-priest-catholicism-religion-faith/" target="_blank" rel="noopener">Co-Founder Of E.L.F. Cosmetics, Scott Borba, Abandons Luxury Lifestyle For Priesthood</a>
           
         </div>
-        <div class="article" data-summary="'HOSTILE FOREIGN NATIONS SHOULD NOT BE ALLOWED TO PURCHASE OUR PRECIOUS AMERICAN FARMLAND'">
+        <div class="article" data-summary="'Google is attempting to manipulate the LA mayoral election'">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/rooke-trump-china-xi-white-house-beef-university-deal-trade/" target="_blank" rel="noopener">ROOKE: Trump’s China Trip Leaves US With More Questions Than Answers</a>
+          <a href="https://dailycaller.com/2026/05/19/rooke-google-maps-pacific-palisades-eaton-fires-los-angeles-mayoral-primary-karen-bass-spencer-pratt/" target="_blank" rel="noopener">ROOKE: Amid Race Everyone’s Watching, Big Tech ‘Malfunction’ Sparks Criticism For Election Interference</a>
           
         </div>
-        <div class="article" data-summary="'Put their phones down and actually have conversations'">
+        <div class="article" data-summary="The future is here">
           <span class="source">Daily Caller</span>
-          <a href="https://dailycaller.com/2026/05/18/deland-corporation-pizza-hut-tim-sparks-1980s-sales-nostalgia/" target="_blank" rel="noopener">One Man Is On A Mission To Help Restore Pizza Hut’s Former Glory</a>
+          <a href="https://dailycaller.com/2026/05/19/suicide-drones-cuba/" target="_blank" rel="noopener">There’s A New Suicide Drone On The Block, And America’s Enemies Are Salivating Over It</a>
           
         </div>
-        <div class="article" data-summary="Two Democrat-backed candidates running for Georgia Supreme Court seats violated existing judicial conduct rules, the state’s judicial watchdog agency found. According to a Monday report by the Atlanta Journal-Constitution (AJC), the Georgia Judicial Qualifications Commission (JQC) determined that left-wing attorneys Jen Jordan and Miracle Rankin broke the Georgia Code of Judicial Conduct by publicly endorsing […]">
+        <div class="article" data-summary="The left increasingly wants a government in which rights are derived from the government and where rights can similarly be revoked by the government.">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/georgia-watchdog-says-democrat-backed-supreme-court-candidates-broke-judicial-rules/?utm_source=rss&utm_medium=rss&utm_campaign=georgia-watchdog-says-democrat-backed-supreme-court-candidates-broke-judicial-rules" target="_blank" rel="noopener">Georgia Watchdog Says Democrat-Backed Supreme Court Candidates Broke Judicial Rules</a>
+          <a href="https://thefederalist.com/2026/05/19/katy-tur-should-read-the-declaration-of-independence-before-looking-stupid-on-tv-talking-about-it/?utm_source=rss&utm_medium=rss&utm_campaign=katy-tur-should-read-the-declaration-of-independence-before-looking-stupid-on-tv-talking-about-it" target="_blank" rel="noopener">Katy Tur Should Read The Declaration Of Independence Before Looking Stupid On TV Talking About It</a>
           
         </div>
-        <div class="article" data-summary="Democrats are always looking for ways to advance their radical agenda, even in the face of defeat. So, it was no surprise when the “party of democracy” immediately used its humiliating redistricting loss in Virginia as part of its ongoing war against the U.S. Supreme Court. The vicious onslaught began on Friday after SCOTUS rejected […]">
+        <div class="article" data-summary="In a stunning announcement, President Donald Trump endorsed Texas Attorney General Ken Paxton in the state’s upcoming Senate GOP primary against incumbent Sen. John Cornyn on Tuesday. “WE HAVE ALREADY MADE AMERICA GREAT AGAIN, BUT NOW, WE WANT TO MAKE OUR NATION BETTER THAN EVER BEFORE. Therefore, Ken Paxton has my Complete and Total Endorsement […]">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/democrats-weaponize-virginia-gerrymandering-loss-in-their-war-on-scotus/?utm_source=rss&utm_medium=rss&utm_campaign=democrats-weaponize-virginia-gerrymandering-loss-in-their-war-on-scotus" target="_blank" rel="noopener">Democrats Weaponize Virginia Gerrymandering Loss In Their War On SCOTUS</a>
+          <a href="https://thefederalist.com/2026/05/19/an-america-first-patriot-trump-endorses-paxton-in-high-stakes-texas-senate-primary/?utm_source=rss&utm_medium=rss&utm_campaign=an-america-first-patriot-trump-endorses-paxton-in-high-stakes-texas-senate-primary" target="_blank" rel="noopener">‘An America First Patriot’: Trump Endorses Paxton In High-Stakes Texas Senate Primary</a>
           
         </div>
-        <div class="article" data-summary="When America rededicates herself to the foundation of all our freedoms, that is, Christianity, they're not advocating for a theocracy. But they are recognizing the moral framework that underpins natural rights and our republican form of self government.">
+        <div class="article" data-summary="'Rather than offering the federal judiciary an objective guide to scientific principles, the chapter functions as an ex parte brief for one side of ongoing litigation.'">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/media-livid-over-trump-acknowledging-christian-founding/?utm_source=rss&utm_medium=rss&utm_campaign=media-livid-over-trump-acknowledging-christian-founding" target="_blank" rel="noopener">Media Livid Over Trump Acknowledging Christian Founding</a>
+          <a href="https://thefederalist.com/2026/05/19/23-state-ags-probe-federal-judicial-centers-distribution-of-biased-climate-guide-to-judges/?utm_source=rss&utm_medium=rss&utm_campaign=23-state-ags-probe-federal-judicial-centers-distribution-of-biased-climate-guide-to-judges" target="_blank" rel="noopener">23 State AGs Probe Federal Judicial Center’s Distribution Of ‘Biased’ Climate Guide To Judges</a>
           
         </div>
-        <div class="article" data-summary="Republicans, take note: While it’s supposedly a major party foul to question the results of an election (at least when Republicans do it), it’s apparently just fine to undo the results when they don’t go your way. That should be really useful information going forward. A couple of prominent Democrats made those rules very clear […]">
+        <div class="article" data-summary="The question at the heart of the AI debate is whether the human person can survive in a world dominated by mass artificial intelligence.">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/democrats-have-completely-normalized-their-threats-to-democracy/?utm_source=rss&utm_medium=rss&utm_campaign=democrats-have-completely-normalized-their-threats-to-democracy" target="_blank" rel="noopener">Democrats Have Completely Normalized Their Threats To Democracy</a>
+          <a href="https://thefederalist.com/2026/05/19/data-center-animosity-reflects-legit-concerns-ai-mongers-dont-care-about-humanitys-interests/?utm_source=rss&utm_medium=rss&utm_campaign=data-center-animosity-reflects-legit-concerns-ai-mongers-dont-care-about-humanitys-interests" target="_blank" rel="noopener">Data Center Animosity Reflects Legit Concerns AI-Mongers Don’t Care About Humanity’s Interests</a>
           
         </div>
-        <div class="article" data-summary="This latest denial of access fits a troubling pattern of transparency concerns in Georgia elections.">
+        <div class="article" data-summary="While it’s not against the law for a foreign traveler to deliver her baby in the U.S., Gill said it's illegal to 'misrepresent yourself.'">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/georgia-election-board-barred-from-vote-observation-room-echoing-2020-obstruction/?utm_source=rss&utm_medium=rss&utm_campaign=georgia-election-board-barred-from-vote-observation-room-echoing-2020-obstruction" target="_blank" rel="noopener">Georgia Election Board Barred From Vote Observation Room, Echoing 2020 Obstruction</a>
+          <a href="https://thefederalist.com/2026/05/19/lawmakers-open-investigation-into-thriving-birth-tourism-economy/?utm_source=rss&utm_medium=rss&utm_campaign=lawmakers-open-investigation-into-thriving-birth-tourism-economy" target="_blank" rel="noopener">Lawmakers Open Investigation Into ‘Thriving Birth Tourism Economy’</a>
           
         </div>
-        <div class="article" data-summary="Berenson told The Federalist, 'the government’s admission is a crucial step forward in our case.'">
+        <div class="article" data-summary="If you're underwhelmed by the official merch, this is for you: the Federalist guide to America 250 gear for a semiquincentennial summer.">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/covid-dissenter-alex-berensons-free-speech-victory-might-be-the-first-of-many/?utm_source=rss&utm_medium=rss&utm_campaign=covid-dissenter-alex-berensons-free-speech-victory-might-be-the-first-of-many" target="_blank" rel="noopener">Covid Dissenter Alex Berenson’s Free Speech Victory Might Be The First Of Many</a>
+          <a href="https://thefederalist.com/2026/05/19/the-ultimate-guide-to-semiquincentennial-merch-for-a-red-white-and-blue-250th/?utm_source=rss&utm_medium=rss&utm_campaign=the-ultimate-guide-to-semiquincentennial-merch-for-a-red-white-and-blue-250th" target="_blank" rel="noopener">The Ultimate Guide To Semiquincentennial Merch For A Red-White-And-Blue 250th</a>
           
         </div>
-        <div class="article" data-summary="'Taken together, you see a playbook not used since Elijah Cummings and the IRS targeting scandal days,' PILF's Logan Churchwell said.">
+        <div class="article" data-summary="If you’re looking for something to get you more excited to celebrate America’s 250th birthday than you already are, drop everything you’re doing and go see the Top Gun movies in theaters right now. To commemorate the iconic 1986 film’s 40-year anniversary, Paramount Pictures re-released Top Gun and its riveting sequel, Top Gun: Maverick, in […]">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/dems-set-the-stage-to-silence-election-integrity-groups-when-theyre-back-in-power/?utm_source=rss&utm_medium=rss&utm_campaign=dems-set-the-stage-to-silence-election-integrity-groups-when-theyre-back-in-power" target="_blank" rel="noopener">Dems Set The Stage To Silence Election Integrity Groups When They’re Back In Power</a>
+          <a href="https://thefederalist.com/2026/05/19/nothing-says-america-250-like-top-gun-back-in-theaters/?utm_source=rss&utm_medium=rss&utm_campaign=nothing-says-america-250-like-top-gun-back-in-theaters" target="_blank" rel="noopener">Nothing Says America 250 Like Top Gun Back In Theaters</a>
           
         </div>
-        <div class="article" data-summary="The CCP is building a generation of legal American passport holders, raised under Beijing's educational system, and primed to return.">
+        <div class="article" data-summary="What is unfolding is not just partisan hardball but the normalization of constitutional lawfare, justified because it is by the left.">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/how-the-ccp-uses-birthplace-citizenship-and-surrogacy-to-manufacture-americans/?utm_source=rss&utm_medium=rss&utm_campaign=how-the-ccp-uses-birthplace-citizenship-and-surrogacy-to-manufacture-americans" target="_blank" rel="noopener">How The CCP Uses Birthplace Citizenship And Surrogacy To Manufacture ‘Americans’</a>
+          <a href="https://thefederalist.com/2026/05/19/by-democrats-standards-virginia-redistricting-lawyers-should-lose-their-jobs-licenses-and-life-savings/?utm_source=rss&utm_medium=rss&utm_campaign=by-democrats-standards-virginia-redistricting-lawyers-should-lose-their-jobs-licenses-and-life-savings" target="_blank" rel="noopener">By Democrats’ Standards, Virginia Redistricting Lawyers Should Lose Their Jobs, Licenses, And Life Savings</a>
           
         </div>
-        <div class="article" data-summary="When people show up willing to work, with skills and values that fit with the country they're joining, the results speak for themselves.">
+        <div class="article" data-summary="The goal of giving the government authority to impose labor terms on workers has always been to give more power to union officials.">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/of-course-our-immigration-system-should-discriminate-against-bad-immigrants/?utm_source=rss&utm_medium=rss&utm_campaign=of-course-our-immigration-system-should-discriminate-against-bad-immigrants" target="_blank" rel="noopener">Of Course Our Immigration System Should Discriminate Against Bad Immigrants</a>
+          <a href="https://thefederalist.com/2026/05/19/why-are-republicans-looking-to-pass-obama-era-forced-unionization-bill/?utm_source=rss&utm_medium=rss&utm_campaign=why-are-republicans-looking-to-pass-obama-era-forced-unionization-bill" target="_blank" rel="noopener">Why Are Republicans Looking To Pass Obama-Era Forced Unionization Bill?</a>
           
         </div>
-        <div class="article" data-summary="Sen. Perdue testified that GBI's director initially viewed the evidence as compelling enough to warrant a full investigation.">
+        <div class="article" data-summary="Father Gerald Murray called the 'Vatican-sponsored' report a 'full-fledged endorsement of the homosexual lifestyle.'">
           <span class="source">The Federalist</span>
-          <a href="https://thefederalist.com/2026/05/18/georgia-investigators-killed-2020-election-probe-at-kemps-request-unsealed-testimony-claims/?utm_source=rss&utm_medium=rss&utm_campaign=georgia-investigators-killed-2020-election-probe-at-kemps-request-unsealed-testimony-claims" target="_blank" rel="noopener">Georgia Investigators Killed 2020 Election Probe At Kemp’s Request, Unsealed Testimony Claims</a>
+          <a href="https://thefederalist.com/2026/05/19/emergency-in-the-church-catholic-leaders-decry-vatican-report-that-pushes-homosexuality/?utm_source=rss&utm_medium=rss&utm_campaign=emergency-in-the-church-catholic-leaders-decry-vatican-report-that-pushes-homosexuality" target="_blank" rel="noopener">‘Emergency In The Church’: Catholic Leaders Decry Vatican Report That Pushes Homosexuality</a>
+          
+        </div>
+        <div class="article" data-summary="Daniela, Lara, Manon, Megan, Sophia, and Yoonchae will rock LA's Crypto.com Arena on Nov. 21.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/ticket-sales/katseye-wildworld-tour-2026-where-to-buy-tickets-best-prices/" target="_blank" rel="noopener">How much are the cheapest tickets to see KATSEYE on their ‘WILDWORLD Tour’?</a>
+          
+        </div>
+        <div class="article" data-summary="The typical Gen Zer was handed an iPad as a child; their high school experience was upended by a pandemic; and now, they’re confronted by AI.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/opinion/gen-z-gets-heat-for-booing-ai-but-their-lives-have-been-disrupted-by-tech-more-than-any-generation-since-ww2/" target="_blank" rel="noopener">Gen Z gets heat for booing AI, but their lives have been disrupted by tech more than any generation since WW2</a>
+          
+        </div>
+        <div class="article" data-summary="Some lip service during a baseball game.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/sports/david-cones-quip-about-blue-jays-players-lips-tattoo-creates-awkward-yes-network-scene/" target="_blank" rel="noopener">David Cone’s cringey quip about Blue Jays player’s lips tattoo creates awkward YES Network scene</a>
+          
+        </div>
+        <div class="article" data-summary="Enter the BetMGM bonus code NYPNEWSGET to access an exclusive offer for the Eastern Conference Finals.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/betting/betmgm-bonus-code-nypnewsget-get-up-to-1k-in-no-sweat-tokens-for-the-eastern-conference-finals/" target="_blank" rel="noopener">BetMGM bonus code NYPNEWSGET: Get up to $1K in no-sweat tokens for the Eastern Conference finals</a>
+          
+        </div>
+        <div class="article" data-summary="John Krasinski isn't done with Jack Ryan just yet.">
+          <span class="source">New York Post</span>
+          <a href="https://decider.com/2026/05/19/watch-jack-ryan-ghost-war-movie-streaming-amazon-prime-what-time/" target="_blank" rel="noopener">When Does ‘Tom Clancy’s Jack Ryan: Ghost War’ Movie Come Out on Amazon Prime Video?</a>
+          
+        </div>
+        <div class="article" data-summary="Does Mary still have a shot at landing her big London crush?">
+          <span class="source">New York Post</span>
+          <a href="https://decider.com/2026/05/19/the-other-bennet-sister-exclusive-clip-is-mr-hayward-jealous-of-mary-and-mr-ryder/" target="_blank" rel="noopener">‘The Other Bennet Sister’ Exclusive Clip: Is Mr. Hayward Jealous of Mary and Mr. Ryder?</a>
+          
+        </div>
+        <div class="article" data-summary="The two-time Tony winner said that he expects the London revival of Arthur Miller’s “All My Sons,” which he starred in alongside Marianne Jean-Baptiste and Paapa Essiedu, to head to Broadway next spring.">
+          <span class="source">New York Post</span>
+          <a href="https://pagesix.com/2026/05/19/entertainment/bryan-cranston-says-he-could-be-back-on-broadway-next-season/" target="_blank" rel="noopener">Bryan Cranston says he could be back on Broadway next season</a>
+          <p class="also"><span class="also-label">Also covered by:</span> New York Post</p>
+        </div>
+        <div class="article" data-summary="Burry, who rose to prominence after his bet against the subprime mortgage market was featured in “The Big Short,” pointed to evidence that an increasingly large amount of junk-bond debt and venture capital money is pouring into the AI sector.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/business/big-short-investor-michael-burry-warns-of-similarities-between-ai-boom-and-dot-com-bubble/" target="_blank" rel="noopener">‘Big Short’ investor Michael Burry warns of similarities between AI boom and dot-com bubble</a>
+          
+        </div>
+        <div class="article" data-summary="Some doubts about vaping may go up in smoke with this latest study.">
+          <span class="source">New York Post</span>
+          <a href="https://nypost.com/2026/05/19/health/e-cigarettes-get-a-bad-rap-but-they-can-help-in-2-ways-study/" target="_blank" rel="noopener">E-cigarettes get a bad rap — but scientists say they can be really helpful in 2 ways</a>
           
         </div></section></div>
     </div>
     <div class="grid-bottom">
-      <div class="col-card"><section><div class="lean-header" style="background:rgb(160,190,230)">CENTER-LEFT</div>
+      <div class="col-card"><section id="center-left"><div class="lean-header" style="background:rgb(160,190,230)">CENTER-LEFT</div>
+        <div class="article" data-summary="President Trump has endorsed Texas Attorney General Ken Paxton over incumbent Sen. John Cornyn in the Texas GOP runoff for U.S. Senate, one week before voting ends in the contentious and expensive primary.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5736175/trump-endorses-ken-paxton-texas-senate" target="_blank" rel="noopener">Trump endorses Ken Paxton over incumbent John Cornyn in Texas Senate primary runoff</a>
+          <p class="also"><span class="also-label">Also covered by:</span> ABC News, CBS News, Daily Caller</p>
+        </div>
+        <div class="article" data-summary="While dozens of states have taken legal action against the controversial industry, Minnesota is the first state to pass a law making it a felony for companies like Kalshi and Polymarket to operate.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5821265/minnesota-ban-prediction-markets" target="_blank" rel="noopener">Minnesota becomes first state to ban prediction markets</a>
+          
+        </div>
+        <div class="article" data-summary="New York, Arizona, North Carolina, Kentucky and Nevada are among the states challenging a rule that limits federal student loans for graduate degrees in nursing, physical therapy and more.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5826688/lawsuit-student-loans-nursing-healthcare-graduate-degree" target="_blank" rel="noopener">States sue over new student loan limits on certain nursing and healthcare degrees</a>
+          
+        </div>
+        <div class="article" data-summary="In this illustrated guide, behavioral scientist BJ Fogg breaks down his Tiny Habits framework to help you rethink your approach to starting (or restarting) a habit.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5825984/cant-keep-a-habit-this-comic-shares-a-proven-formula-to-make-it-stick" target="_blank" rel="noopener">Can't keep a habit? This comic shares a proven formula to make it stick</a>
+          
+        </div>
+        <div class="article" data-summary="That's the provocative question that researchers dug into after the U.S. shut down its premier aid agency.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/g-s1-122281/u-s-aid-usaid-trump-violence" target="_blank" rel="noopener">A study investigates: Did the abrupt end of USAID have an impact on violence?</a>
+          
+        </div>
+        <div class="article" data-summary="Israeli authorities are issuing Palestinians demolition orders in East Jerusalem at an accelerated rate since Israel launched war with Iran, human rights groups and U.N. experts say.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5823861/israel-palestinians-east-jerusalem" target="_blank" rel="noopener">Israel's trying to expel a whole Palestinian district in East Jerusalem, activists say</a>
+          
+        </div>
+        <div class="article" data-summary="Colossal Biosciences, a Texas company trying to bring extinct species back to life, reports creating artificial eggs that would be necessary to revive extinct birds such as the dodo.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5805950/artificial-eggs-dodo-moa" target="_blank" rel="noopener">To revive an extinct bird, you first need an artificial egg</a>
+          
+        </div>
+        <div class="article" data-summary="San Diego authorities are investigating a deadly shooting at a mosque as a hate crime. And, Trump dropped his lawsuit against the IRS, paving the way for an &quot;anti-weaponization fund.&quot;">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/g-s1-122806/up-first-newsletter-islamic-center-san-diego-primary-elections-trump-irs-elon-musk-openai" target="_blank" rel="noopener">California mosque shooting leaves 5 dead. And, judge dismisses Trump's IRS lawsuit</a>
+          
+        </div>
+        <div class="article" data-summary="Get ready for a biology lesson. Certain plants have extra sets of chromosomes. And it turns out, it's a useful trait for a species facing a dramatic event like climate change.">
+          <span class="source">NPR</span>
+          <a href="https://www.npr.org/2026/05/19/nx-s1-5825903/plants-polyploidy-genetics-climate-change" target="_blank" rel="noopener">Some plants have a genetic superpower that may help them survive a cataclysm</a>
+          
+        </div>
         <div class="article" data-summary="A new study suggests the growing educational and economic divide between men and women is reshaping marriage and family life in America — leaving many women with a shrinking pool of economically stable partners.">
           <span class="source">NPR</span>
           <a href="https://www.npr.org/sections/planet-money/2026/05/19/g-s1-122695/the-missing-men-of-the-american-marriage-market" target="_blank" rel="noopener">The missing men of the American marriage market</a>
           
         </div>
-        <div class="article" data-summary="Minority Leader Jeffries is urging Speaker Johnson to &quot;swiftly&quot; hold vote on House prediction market ban.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/g-s1-121820/house-holds-off-on-prediction-market-ban-despite-bipartisan-calls-for-prohibition" target="_blank" rel="noopener">House holds off on prediction market ban despite bipartisan calls for prohibition</a>
+        <div class="article" data-summary="WHO chief said he was ‘deeply concerned’ after at least 500 suspected Ebola cases and 130 deaths reported in outbreak of Bundibugyo strain ‘It’s heartbreaking’: panic in eastern DRC over return of Ebola Global health leaders are considering whether vaccines or medicines still in development could be used to fight Ebola in the Democratic Republic of the Congo, as the World Health Organization’s chief said he was deeply concerned by the outbreak’s speed and scale. Dr Tedros Adhanom Ghebreyesus said there had been at least 500 suspected cases of Ebola and 130 suspected deaths in DRC since the new">
+          <span class="source">The Guardian</span>
+          <a href="https://www.theguardian.com/world/2026/may/19/ebola-outbreak-drc-who-tedros-adhanom-ghebreyesus-deeply-concerned" target="_blank" rel="noopener">WHO considers use of experimental vaccines as Ebola cases and deaths rise in DRC</a>
           
         </div>
-        <div class="article" data-summary="Enrollment in Healthcare.gov and the other marketplaces is plunging by 5 million, the new paper from KFF finds. Last year, Congress failed to make a deal to keep the coverage more affordable.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5825887/affordable-care-act-health-insurance-price" target="_blank" rel="noopener">Steep drop in number of people with Affordable Care Act health coverage, analysis finds</a>
-          
-        </div>
-        <div class="article" data-summary="Critics of spyware, which can be used to remotely hack into phones, worry the Trump administration is eroding policies that stigmatized the commercial spyware industry.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5826085/spyware-trump-dhs-paragon" target="_blank" rel="noopener">What we know about how the U.S. government uses spyware (and what we don't)</a>
-          
-        </div>
-        <div class="article" data-summary="Recipients of the Obama-era DACA program are aging, even as the Trump administration moves to weaken the program's protections and benefits.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/g-s1-121405/immigration-trump-daca-generation-limbo" target="_blank" rel="noopener">'We're not kids anymore': The DACA generation hits their 30s with an unstable future</a>
-          
-        </div>
-        <div class="article" data-summary="In tennis, clay has a reputation for being one of the harder surfaces to play on. But a few pros shared some of their tips for staying sharp.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5822888/french-open-clay-hailey-baptiste" target="_blank" rel="noopener">The French Open courts are clay, a tricky surface for some. Here's how the pros do it</a>
-          
-        </div>
-        <div class="article" data-summary="The nation's top safety investigators will launch a two-day hearing beginning Tuesday into what caused a UPS cargo plane to crash shortly after takeoff in Louisville last year, killing 15 people.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5823467/ups-crash-md-11-ntsb-louisville" target="_blank" rel="noopener">NTSB hearing will probe cause of fiery UPS jet crash that killed 15 in Louisville</a>
-          
-        </div>
-        <div class="article" data-summary="Two Black men from Georgia who voted for President Trump in 2024 have very different views of how the country is doing now, in the first installment of Swing Shift from NPR's Tamara Keith.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5788971/swing-voters-trump-president-approval-2026-midterms" target="_blank" rel="noopener">These men voted for President Trump. They have very different views of how he's doing</a>
-          
-        </div>
-        <div class="article" data-summary="In conservative Utah, a coalition of cities and towns shows other communities how to bring new renewable energy to the electric grid in a unique way.">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/nx-s1-5734480/renewable-energy-utah" target="_blank" rel="noopener">In conservative Utah, some communities are ditching fossil fuel power for clean energy</a>
-          
-        </div>
-        <div class="article" data-summary="The Kremlin has said Putin and Xi plan to discuss economic cooperation between the two countries, but also &quot;key international and regional issues.&quot;">
-          <span class="source">NPR</span>
-          <a href="https://www.npr.org/2026/05/19/g-s1-122775/putin-visits-china" target="_blank" rel="noopener">Putin visits China to reaffirm Russia ties</a>
+        <div class="article" data-summary="Conflict, mistrust and delayed detection could complicate response to emergency caused by Bundibugyo variant To be around the centre of an Ebola outbreak is to become used to the smell of chlorine. At hospitals and government buildings, surfaces are sprayed with it and hands washed in a 0.05% solution that can kill the virus in 60 seconds. Infrared handheld thermometers take temperatures at airports and border crossings. Any indication of a fever prevents passage. Contact-tracing teams crisscross the countryside. Continue reading...">
+          <span class="source">The Guardian</span>
+          <a href="https://www.theguardian.com/world/2026/may/19/why-the-lessons-of-the-drcs-last-ebola-outbreak-are-being-tested-again" target="_blank" rel="noopener">As WHO sounds alarm over Ebola in DRC, what can be learned from previous outbreaks?</a>
           
         </div>
         <div class="article" data-summary="Trump has repeatedly made false claims that white Afrikaners facing genocide with costs of resettling them at $100m The US government has said it will increase the number of white South Africans it admits as refugees this year from about 7,500 to 17,500, claiming that “unforeseen developments in South Africa created an emergency refugee situation.” Since starting his second term in office last year, Donald Trump has repeatedly made false claims that white Afrikaners are racially targeted and face a “white genocide” , which South Africa’s government has furiously rebutted. Continue reading...">
@@ -816,24 +822,29 @@
           <a href="https://www.theguardian.com/us-news/2026/may/19/us-government-increase-white-south-africa-refugees" target="_blank" rel="noopener">US claims ‘emergency refugee situation’ as it admits 10,000 more white South Africans</a>
           
         </div>
-        <div class="article" data-summary="At least 130 people thought to have been killed, says Tedros Adhanom Ghebreyesus before emergency meeting ‘It’s heartbreaking’: panic in eastern DRC over return of Ebola The director general of the World Health Organization has said he is deeply concerned about the scale and the speed of the Ebola outbreak in the Democratic Republic of the Congo. Dr Tedros Adhanom Ghebreyesus said there had been at least 500 suspected cases of Ebola and 130 suspected deaths in DRC since the new outbreak began. Thirty cases had been confirmed in DRC’s north-eastern province of Ituri, and one death and one case ">
-          <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/2026/may/19/ebola-outbreak-drc-who-tedros-adhanom-ghebreyesus-deeply-concerned" target="_blank" rel="noopener">WHO head ‘deeply concerned’ by Ebola outbreak as cases and deaths rise in DRC</a>
-          
-        </div>
         <div class="article" data-summary="Zainab Sheriff unjustly sentenced to four years in prison for incitement and threatening language, say activists Lawyers, politicians and activists have called for the release of one of Sierra Leone’s best-known celebrities, who they said was unjustly imprisoned as part of a government crackdown on free speech and political dissent. Zainab Sheriff, a singer and reality-TV show contestant who became a political opposition figure, was sentenced in April to four years and two months’ imprisonment for incitement and using threatening language. Continue reading...">
           <span class="source">The Guardian</span>
           <a href="https://www.theguardian.com/global-development/2026/may/19/calls-for-release-of-sierra-leonean-singer-jailed-in-crackdown-on-free-speech" target="_blank" rel="noopener">Calls for release of Sierra Leonean singer jailed in ‘crackdown on free speech’</a>
           
         </div>
-        <div class="article" data-summary="Prosecution is seen as landmark step towards justice over abuses of refugees trying to reach Europe from Africa A former militia commander accused of overseeing murder, rape, enslavement and torture in Libyan detention centres will appear at the international criminal court on Tuesday for a hearing that campaigners say is a landmark step towards “justice, truth, reparation and deterrence” of abuses of refugees trying to reach Europe from Africa. The prosecution of Khaled Mohamed Ali El Hishri on charges of war crimes and crimes against humanity is the first to reach a courtroom resulting from ">
+        <div class="article" data-summary="Prosecution is seen as landmark step towards justice over abuses of refugees trying to reach Europe from Africa A former militia commander accused of overseeing murder, rape, enslavement and torture in Libyan detention centres has appeared at the international criminal court for a hearing that campaigners say is a landmark step towards “justice, truth, reparation and deterrence” of abuses of refugees trying to reach Europe from Africa. The prosecution of Khaled Mohamed Ali El Hishri on charges of war crimes and crimes against humanity is the first to reach a courtroom resulting from the ICC’s ">
           <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/2026/may/19/libya-militia-commander-refugees-international-criminal-court" target="_blank" rel="noopener">‘Huge milestone’ as Libyan militia commander accused of torture to appear at ICC</a>
+          <a href="https://www.theguardian.com/world/2026/may/19/libya-militia-commander-refugees-international-criminal-court" target="_blank" rel="noopener">‘Huge milestone’ as Libyan militia commander accused of torture appears at ICC</a>
           
         </div>
-        <div class="article" data-summary="Residents of Ituri province fear spread of disease and economic impact of outbreak six years after the last “On public transport, in bars and at mass gatherings, everyone is talking about Ebola,” said Gloire Mumbesa, a resident of Mongbwalu, a mining town in the Democratic Republic of the Congo. He said cases of the disease had been reported locally and panic was engulfing the area because of the lack of a vaccine for the Bundibudyo strain. “The fear is that this disease may spread to many other areas.” Residents of Ituri province in eastern DRC, where the World Health Organization announced a">
+        <div class="article" data-summary="Off-duty officers allegedly assaulted a sex worker in a taxi in Ciutat Vella, according to police in Catalonia Sign up for the Breaking News US newsletter email Three off-duty Toronto police officers have been charged with sexual assault while vacationing in Barcelona , in an incident likely to pile pressure on a force already under intense public scrutiny. According to police in Barcelona, the alleged assault occurred on the evening of 13 May, when the trio of police officers were travelling in a taxi with a sex worker in the Ciutat Vella neighbourhood of Barcelona. Continue reading...">
           <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/2026/may/18/ituri-eastern-drc-ebola-outbreak-panic-fear" target="_blank" rel="noopener">‘It’s heartbreaking’: panic in eastern DRC over return of Ebola</a>
+          <a href="https://www.theguardian.com/world/2026/may/19/toronto-police-sexual-assault-charge-barcelona" target="_blank" rel="noopener">Three Toronto police officers charged with sexual assault in Barcelona</a>
+          
+        </div>
+        <div class="article" data-summary="Investigation launched as video circulates online showing officer firing at vehicle and colleagues dragging away body Authorities in Jamaica have launched an investigation after CCTV footage of a woman’s fatal shooting by police sent shock waves across the Caribbean nation. Footage circulating on social media shows a police officer firing at a vehicle during a protest on Sunday in Granville, in Jamaica’s north-western parish of St James. The bullet hit Latoya Bulgin, 45, who was behind the wheel of the vehicle. Continue reading...">
+          <span class="source">The Guardian</span>
+          <a href="https://www.theguardian.com/world/2026/may/19/woman-shot-dead-by-police-jamaica-protest" target="_blank" rel="noopener">Woman shot dead by police in Jamaica at protest over previous police shooting</a>
+          
+        </div>
+        <div class="article" data-summary="Officials will determine if standard process was followed before lethal strikes in Caribbean and eastern Pacific Sign up for the Breaking News US newsletter email The Pentagon’s internal watchdog has opened an investigation into whether US military commanders followed proper procedures when conducting boat strikes in the Caribbean and the eastern Pacific. The office of inspector general at the Department of Defense is examining whether military commanders stuck to the standard six-step process the US military is required to follow before approving and carrying out lethal strikes, according to ">
+          <span class="source">The Guardian</span>
+          <a href="https://www.theguardian.com/us-news/2026/may/19/defense-department-inquiry-airstrikes-alleged-drug-boats" target="_blank" rel="noopener">Defense department watchdog opens inquiry into US airstrikes on alleged drug boats</a>
           
         </div>
         <div class="article" data-summary="Mexican president Claudia Sheinbaum denies any links between her Morena party and organized crime Pressure is mounting on Claudia Sheinbaum, Mexico’s president, after two former top officials from the country’s Sinaloa state – both members of her Morena party – gave themselves up to US authorities over alleged ties to the Sinaloa cartel. The state’s former security minister Gerardo Mérida Sánchez crossed the border into Arizona last week and was taken into custody by US marshals, Mexico’s security ministry said. Sinaloa’s former finance minister, Enrique Díaz Vega, was taken into custody in Ne">
@@ -846,79 +857,54 @@
           <a href="https://www.theguardian.com/world/2026/may/18/cuba-warns-of-bloodbath-us-military-drone-claim" target="_blank" rel="noopener">Cuba warns US of ‘bloodbath’ if military action follows drone claims</a>
           
         </div>
-        <div class="article" data-summary="Mayor’s attempt to beautify the city with murals of mascot and plum paint jobs criticised as waste of resources The giant purple axolotl peered up at Manuel Martínez from the black bitumen of the street. It was the second such painting of the rare amphibian he had walked past that morning. In recent weeks he had seen axolotl murals pop up in neighbourhoods across Mexico City. “It’s a waste of money,” he said. “You could use that budget for fixing potholes, traffic lights, security cameras. They’re spending on something that doesn’t benefit us at all – it’s just for tourists.” Continue reading.">
-          <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/2026/may/18/mexico-city-axolotl-murals-purple-mayor-world-cup" target="_blank" rel="noopener">Purple pain: backlash over Mexico City’s ‘axolotlisation’ for World Cup</a>
-          
-        </div>
-        <div class="article" data-summary="Civilians left increasingly exposed as a dangerous new front opens up in the country’s decades-old conflict As night fell over southern Colombia , and a group of children began their weekly Tuesday football match, a drone appeared overhead. The children looked up, and the drone dropped a grenade, its blast killing a 10-year-old boy and injuring 12 more civilians. The child’s death, in southern Cauca in 2024, marked the first known time a person in the country had been killed in a weaponised drone attack. Continue reading...">
-          <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/2026/may/18/drones-war-colombia-civilians-farc-acled" target="_blank" rel="noopener">Drones reshape war in Colombia as deaths and injuries mount</a>
-          
-        </div>
-        <div class="article" data-summary="Four months after Trump’s surprise raid, a political thaw has descended – but mingled with hope is trepidation for what comes next When Ángel Linares heard a strange buzz followed by an explosion, his first thought was that neighbours were setting off fireworks to celebrate the new year. Then his windows shattered, the building’s walls shook and its facade was ripped off, sending him flying on to the ground of an apartment suddenly reduced to rubble. His 85-year-old mother, Jesucita, feared Venezuela’s northern coast had been devastated by an earthquake, like the one she remembers from 1967. C">
-          <span class="source">The Guardian</span>
-          <a href="https://www.theguardian.com/world/ng-interactive/2026/may/17/feels-like-an-illusion-how-trump-seizing-maduro-has-changed-little-in-venezuela" target="_blank" rel="noopener">‘Feels like an illusion’: inside post-Maduro Venezuela’s bewildering new era</a>
-          
-        </div>
-        <div class="article" data-summary="High court is investigating Zapatero over airline aid, putting pressure on current PM.">
+        <div class="article" data-summary="The move comes months after Israel officially recognised the independence of Somalia's breakaway region.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/19/spains-former-pm-zapatero-faces-corruption-probe?traffic_source=rss" target="_blank" rel="noopener">Spain’s former PM Zapatero faces corruption probe</a>
+          <a href="https://www.aljazeera.com/news/2026/5/19/somaliland-israel-announce-mutual-embassies-in-jerusalem-and-hargeisa?traffic_source=rss" target="_blank" rel="noopener">Somaliland to open embassy in Jerusalem, Israel in Hargeisa: Envoy</a>
           
         </div>
-        <div class="article" data-summary="A panel of experts ⁠led by ⁠the WHO is to meet to discuss vaccine ⁠options for new epidemic.">
+        <div class="article" data-summary="Russian President Vladimir Putin has arrived in Beijing for talks with Chinese leader Xi Jinping.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/19/who-to-hold-emergency-committee-meeting-as-ebola-death-toll-rises-to-131?traffic_source=rss" target="_blank" rel="noopener">WHO to hold emergency committee meeting as Ebola death toll rises to 131</a>
+          <a href="https://www.aljazeera.com/video/newsfeed/2026/5/19/putin-arrives-in-china-for-talks-with-chinese-leader-xi-jinping?traffic_source=rss" target="_blank" rel="noopener">Putin arrives in China for talks with Chinese leader Xi Jinping</a>
           
         </div>
-        <div class="article" data-summary="With Iran's local football league suspended since March, most players in the squad have not been in action for months.">
+        <div class="article" data-summary="Rights advocate accuses Washington of using 'terrorism label' to shut down Palestine activism internationally.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/sports/2026/5/19/iran-squad-in-race-against-time-for-world-cup-readiness-amid-us-israel-war?traffic_source=rss" target="_blank" rel="noopener">Iran squad in race against time for World Cup readiness amid US-Israel war</a>
+          <a href="https://www.aljazeera.com/news/2026/5/19/us-imposes-sanctions-on-gaza-flotilla-organisers-amid-israeli-crackdown?traffic_source=rss" target="_blank" rel="noopener">US imposes sanctions on Gaza flotilla organisers amid Israeli crackdown</a>
           
         </div>
-        <div class="article" data-summary="Thanks to Netanyahu and Trump, scandal is now our new normal - call it 'Everythinggate'.">
+        <div class="article" data-summary="After an ICC warrant request, Israel's Smotrich threatened to displace Palestinians from the West Bank.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/opinions/2026/5/19/the-us-israel-and-the-normalisation-of-scandal?traffic_source=rss" target="_blank" rel="noopener">The US, Israel and the normalisation of scandal</a>
+          <a href="https://www.aljazeera.com/video/newsfeed/2026/5/19/israels-far-right-finance-minister-smotrich-says-icc-seeking-his-arrest?traffic_source=rss" target="_blank" rel="noopener">Israel’s far-right Finance Minister Smotrich says ICC seeking his arrest</a>
           
         </div>
-        <div class="article" data-summary="War-damaged Khartoum sees uneven recovery as residents weigh return amid fragile services and economy.">
+        <div class="article" data-summary="Amin Abdullah, the security guard killed while trying to stop gunmen entering the Islamic Centre of San Diego.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/19/khartoums-slow-recovery-amid-cautious-return?traffic_source=rss" target="_blank" rel="noopener">Khartoum’s slow recovery amid cautious return</a>
+          <a href="https://www.aljazeera.com/video/newsfeed/2026/5/19/tributes-pour-in-for-hero-guard-killed-in-san-diego-mosque-shooting?traffic_source=rss" target="_blank" rel="noopener">Tributes pour in for ‘hero’ guard killed in San Diego mosque shooting</a>
+          <p class="also"><span class="also-label">Also covered by:</span> Al Jazeera</p>
+        </div>
+        <div class="article" data-summary="US president also says he could again strike Iran if progress on ceasefire is not made within 'days'.">
+          <span class="source">Al Jazeera</span>
+          <a href="https://www.aljazeera.com/news/2026/5/19/trump-says-xi-assured-him-china-would-not-send-weapons-to-iran?traffic_source=rss" target="_blank" rel="noopener">Trump says Xi assured him China would not send weapons to Iran</a>
           
         </div>
-        <div class="article" data-summary="'Tank Day' marketing campaign provoked backlash for eliciting bloody suppression of 1980 Gwangju uprising.">
+        <div class="article" data-summary="With less than six months to midterms, Al Jazeera explains how district boundaries may determine who controls the House.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/economy/2026/5/19/starbucks-korea-ceo-fired-over-promotion-that-evoked-military-crackdown?traffic_source=rss" target="_blank" rel="noopener">Starbucks Korea CEO fired over promotion that evoked military crackdown</a>
+          <a href="https://www.aljazeera.com/news/longform/2026/5/19/how-the-shape-of-a-map-can-determine-the-us-midterm-elections?traffic_source=rss" target="_blank" rel="noopener">How the shape of a map can determine the US midterm elections</a>
           
         </div>
-        <div class="article" data-summary="Scant progress in US-China talks bolsters Putin, while for China, hosting back-to-back visits is a diplomatic flex.">
+        <div class="article" data-summary="Lebanon death toll since March 2 has reached 3,042, according to the country's Health Ministry.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/features/2026/5/19/neutral-superpower-china-why-putin-visit-to-beijing-after-trump-matters?traffic_source=rss" target="_blank" rel="noopener">‘China holds the cards’: Why Putin’s visit to Beijing after Trump matters</a>
+          <a href="https://www.aljazeera.com/news/2026/5/19/at-least-22-killed-in-israeli-attacks-on-lebanon-in-24-hours-ministry?traffic_source=rss" target="_blank" rel="noopener">At least 22 killed in Israeli attacks on Lebanon in 24 hours: Ministry</a>
           
         </div>
-        <div class="article" data-summary="A boy who survived the San Diego mosque shooting that killed three people has described seeing ‘bad stuff’.">
+        <div class="article" data-summary="Former world number one says he's still not ready to compete as he recovers from a serious injury sustained in April.">
           <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/video/newsfeed/2026/5/19/child-survivor-of-san-diego-mosque-shooting-describes-ordeal?traffic_source=rss" target="_blank" rel="noopener">Child survivor of San Diego mosque shooting describes ordeal</a>
-          
-        </div>
-        <div class="article" data-summary="The affected area extends more than 1,000km (620 miles), according to Chinese meteorologists.">
-          <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/19/at-least-10-dead-as-huge-floods-sweep-southern-and-central-china?traffic_source=rss" target="_blank" rel="noopener">At least 10 dead as huge floods sweep southern and central China</a>
-          
-        </div>
-        <div class="article" data-summary="With Keir Starmer under fire, it is Manchester’s mayor who looks to be the key challenger.">
-          <span class="source">Al Jazeera</span>
-          <a href="https://www.aljazeera.com/news/2026/5/19/king-of-the-north-who-is-andy-burnham-a-potential-uk-prime-minister?traffic_source=rss" target="_blank" rel="noopener">‘King of the North’: Who is Andy Burnham, a potential UK prime minister?</a>
+          <a href="https://www.aljazeera.com/sports/2026/5/19/carlos-alcaraz-withdraws-from-wimbledon-with-wrist-injury?traffic_source=rss" target="_blank" rel="noopener">Carlos Alcaraz withdraws from Wimbledon with wrist injury</a>
           
         </div>
         <div class="article" data-summary="In an age where it feels like we should all know less about each other, there’s at least one place on the internet where you just want to know more: It’s called r/GirlDinnerDiaries. As its name suggests, the subreddit consists of women posting a photo of their meal accompanied by a brief story about what’s […]">
           <span class="source">Vox</span>
           <a href="https://www.vox.com/culture/488753/girl-dinner-diaries-reddit-explained" target="_blank" rel="noopener">The sublime, feral pleasure of Girl Dinner Diaries</a>
-          
-        </div>
-        <div class="article" data-summary="Kamala Harris wants to talk about packing the Supreme Court. Last Wednesday, during a video event hosted by the advocacy group Win With Black Women, the former vice president rattled off a long list of democracy reforms that could be part of an “expanded playbook” Democrats can use to reverse a series of recent policy […]">
-          <span class="source">Vox</span>
-          <a href="https://www.vox.com/politics/488987/supreme-court-packing-kamala-harris" target="_blank" rel="noopener">Packing the Supreme Court is no longer a fringe idea</a>
           
         </div>
         <div class="article" data-summary="It lives in a glass castle deep under the sea. It’s not a character from The Little Mermaid but a very real, very mysterious marine worm. Known as Dalhousiella yabukii, the worm resides inside a glass sea sponge — a simple marine animal that forms a glass-like skeleton — in the cold, dark waters off […]">
@@ -961,261 +947,241 @@
           <a href="https://www.vox.com/future-perfect/488761/ai-tech-humanism-transhumanism-shannon-vallor" target="_blank" rel="noopener">How to fall in love with humanity again</a>
           
         </div>
-        <div class="article" data-summary="Former Los Angeles police detective Mark Fuhrman, who was convicted of lying during testimony at the OJ Simpson murder trial, has died.">
-          <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/nation/mark-fuhrman-former-la-police-detective-convicted-of-lying-during-oj-simpson-murder-trial-has-died" target="_blank" rel="noopener">Mark Fuhrman, former LA police detective convicted of lying during OJ Simpson murder trial, has died</a>
-          <p class="also"><span class="also-label">Also covered by:</span> Daily Caller</p>
-        </div>
-        <div class="article" data-summary="An attack at an Islamic center in San Diego has left several people dead. Police officials say three adult males were killed, including a security guard. They also say the two teenage suspects, believed to be 17 and 19, were later found dead, apparently from self-inflicted gunshots. Investigators say they're treating the shooting as a hate crime until proven otherwise.">
-          <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/teenage-gunmen-open-fire-on-islamic-center-of-san-diego-police-say" target="_blank" rel="noopener">Teenage gunmen open fire on Islamic Center of San Diego, police say</a>
+        <div class="article" data-summary="It often feels like we’re on the brink of disaster: Diseases lurk behind every corner and global instability threatens the economy. But beyond the doomsday scenarios, it’s important to be prepared for more practical reasons: Extreme weather events, for example, have become a fact of life. It can all be a lot to worry about […]">
+          <span class="source">Vox</span>
+          <a href="https://www.vox.com/explain-it-to-me/488519/how-to-prep-natural-disaster-pandemic-small-apartment-city" target="_blank" rel="noopener">How to prepare for a huge disaster when you live in a tiny apartment</a>
           
         </div>
-        <div class="article" data-summary="The Justice Department said it is creating a nearly $1.8 billion fund that could compensate Trump supporters who say they were wrongly investigated or prosecuted by previous administrations. The announcement came as part of a settlement with President Trump to drop a $10 billion lawsuit he filed against the IRS over the leak of his tax returns in 2019. Justice correspondent Ali Rogin reports.">
+        <div class="article" data-summary="Is there a future in politics for Republicans who buck President Donald Trump?">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/doj-creates-1-8-billion-fund-that-could-compensate-targeted-trump-allies" target="_blank" rel="noopener">DOJ creates $1.8 billion fund that could compensate 'targeted' Trump allies</a>
+          <a href="https://www.pbs.org/newshour/politics/trumps-endorsement-put-to-the-test-in-tuesdays-primaries" target="_blank" rel="noopener">Trump's endorsement put to the test in Tuesday's primaries</a>
           
         </div>
-        <div class="article" data-summary="Former FBI Director James Comey faces a trial on charges he threatened President Trump's life. The case stems from an Instagram post of shells spelling out &quot;86 47.&quot; It is the second indictment against him and one of several investigations involving people Trump sees as political enemies. Geoff Bennett spoke with Comey about the case and his new book, &quot;Red Verdict.&quot;">
+        <div class="article" data-summary="Cassidy lost his seat in his state's Republican primary Saturday after Trump endorsed one of his opponents.">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/theres-an-obsession-there-comey-says-of-trump-after-2nd-indictment" target="_blank" rel="noopener">'There's an obsession there,' Comey says of Trump after 2nd indictment</a>
+          <a href="https://www.pbs.org/newshour/politics/sen-cassidy-has-no-regrets-over-trump-impeachment-vote-even-after-it-cost-him-his-seat" target="_blank" rel="noopener">Sen. Cassidy has no regrets over Trump impeachment vote, even after it cost him his seat</a>
           
         </div>
-        <div class="article" data-summary="In our news wrap Monday, President Trump said he called off a strike on Iran planned for Tuesday at the request of Gulf allies, a brush fire north of Los Angeles is forcing thousands to flee, commuters were left scrambling after negotiators failed to settle the Long Island Rail Road strike and an investigation is underway into the collision of two Navy jets during an air show in Idaho.">
+        <div class="article" data-summary="Although the four-term Cornyn has backed Trump's agenda in Washington, Paxton pitched himself as a political warrior for the MAGA movement.">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/news-wrap-trump-says-he-called-off-strike-on-iran-planned-for-tuesday" target="_blank" rel="noopener">News Wrap: Trump says he called off strike on Iran planned for Tuesday</a>
+          <a href="https://www.pbs.org/newshour/politics/trump-endorses-paxton-in-texas-republican-primary-boosting-effort-to-oust-sen-cornyn" target="_blank" rel="noopener">Trump endorses Paxton in Texas Republican primary, boosting effort to oust Sen. Cornyn</a>
           
         </div>
-        <div class="article" data-summary="Health officials are racing to contain a rapidly expanding outbreak of Ebola in Africa. At least 116 suspected deaths and more than 300 other cases have been reported in the Democratic Republic of Congo and neighboring Uganda. The CDC says an American medical missionary has contracted the disease. Amna Nawaz discussed more with Dr. Craig Spencer, who contracted Ebola during a 2014 outbreak.">
+        <div class="article" data-summary="Acting Attorney General Todd Blanche appeared on Capitol Hill for his first congressional testimony since taking the reins at the Justice Department, as the agency faces intense scrutiny over its plans to create a $1.776 billion fund to pay allies of President Donald Trump who believe they were targeted politically.">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/doctor-who-survived-ebola-shares-concerns-about-latest-outbreak-in-central-africa" target="_blank" rel="noopener">Doctor who survived Ebola shares concerns about latest outbreak in Central Africa</a>
-          
+          <a href="https://www.pbs.org/newshour/politics/watch-live-vance-holds-white-house-briefing-as-acting-ag-blanche-faces-questioning" target="_blank" rel="noopener">WATCH LIVE: Vance holds White House briefing as acting AG Blanche faces questioning</a>
+          <p class="also"><span class="also-label">Also covered by:</span> The Hill</p>
         </div>
-        <div class="article" data-summary="A federal judge in California dismissed a lawsuit from Elon Musk against the maker of ChatGPT after a jury found that he exceeded the statute of limitations. Musk had claimed that OpenAI betrayed its original mission of developing artificial intelligence for the good of humanity when it added a for-profit arm. Geoff Bennett discussed more with Gerrit De Vynck of The Washington Post.">
+        <div class="article" data-summary="Only three of Alabama's seven congressional districts will hold binding primaries Tuesday in the wake of a U.S. Supreme Court decision that prompted Republicans in a handful of southern states to throw out their congressional maps.">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/jury-throws-out-musks-lawsuit-against-openai-and-sam-altman" target="_blank" rel="noopener">Jury throws out Musk's lawsuit against OpenAI and Sam Altman</a>
-          
+          <a href="https://www.pbs.org/newshour/politics/live-results-alabama-midterm-congressional-primaries" target="_blank" rel="noopener">Live Results: Alabama midterm congressional primaries</a>
+          <p class="also"><span class="also-label">Also covered by:</span> PBS NewsHour</p>
         </div>
-        <div class="article" data-summary="NPR's Tamara Keith and Amy Walter of the Cook Political Report with Amy Walter join Amna Nawaz to discuss the latest political news, including President Trump successfully ousting Sen. Bill Cassidy, the Republican who voted to convict him in his impeachment trial five years ago, and the president's power in upcoming GOP primaries.">
+        <div class="article" data-summary="The Trump administration announced Monday the creation of a nearly $1.8 billion fund to compensate allies of the Republican president who believe they have been unjustly investigated and prosecuted. Blanche is expected to be pressed on the fund when he testifies Tuesday on Capitol Hill.">
           <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/tamara-keith-and-amy-walter-on-trumps-power-in-pushing-out-disloyal-republicans" target="_blank" rel="noopener">Tamara Keith and Amy Walter on Trump's power in pushing out 'disloyal' Republicans</a>
-          
-        </div>
-        <div class="article" data-summary="This month in India, political violence erupted in the eastern state of West Bengal after Prime Minister Narendra Modi's party won key elections amid allegations of voter suppression targeting Muslims. Zeba Warsi reports with support from the Unity Productions Foundation on families that are now fighting to prove they belong in the only country they've ever known.">
-          <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/show/bengali-muslims-in-india-face-persecution-and-displacement-amid-citizenship-disputes" target="_blank" rel="noopener">Bengali Muslims in India face persecution and displacement amid citizenship disputes</a>
-          
-        </div>
-        <div class="article" data-summary="A former Virginia assistant principal is on trial, accused of ignoring warnings that a student brought a loaded gun to an elementary school.">
-          <span class="source">PBS NewsHour</span>
-          <a href="https://www.pbs.org/newshour/nation/trial-begins-for-former-virginia-assistant-principal-after-6-year-old-student-shot-teacher" target="_blank" rel="noopener">Trial begins for former Virginia assistant principal after 6-year-old student shot teacher</a>
+          <a href="https://www.pbs.org/newshour/politics/watch-live-acting-attorney-general-blanche-may-be-questioned-on-weaponization-fund-in-budget-hearing" target="_blank" rel="noopener">WATCH: Acting Attorney General Blanche questioned on 'weaponization' fund in budget hearing</a>
           
         </div></section></div>
-      <div class="col-card"><section><div class="lean-header" style="background:rgb(230,190,160)">CENTER-RIGHT</div>
-        <div class="article" data-summary="Former Denver Broncos and Dallas Cowboys quarterback Craig Morton's cause of death revealed as acute respiratory failure due to sepsis from a urinary infection.">
+      <div class="col-card"><section id="center-right"><div class="lean-header" style="background:rgb(230,190,160)">CENTER-RIGHT</div>
+        <div class="article" data-summary="Jeff Foxworthy's new stand-up special brings Southern humor and behind-the-scenes insights to fans when it premieres on Fox Nation starting June 1.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/sports/super-bowl-champion-craig-mortons-cause-death-revealed-passing-83" target="_blank" rel="noopener">Super Bowl champion Craig Morton’s cause of death revealed after his passing at 83</a>
+          <a href="https://www.foxnews.com/media/jeff-foxworthy-brings-decades-comedy-wisdom-new-fox-nation-special-premiering-june" target="_blank" rel="noopener">Jeff Foxworthy brings decades of comedy wisdom to new Fox Nation special premiering this June</a>
           
         </div>
-        <div class="article" data-summary="Sen Bill Cassidy defended his vote to impeach President Donald Trump on Monday, saying he considered it a &quot;privilege&quot; to upholding the Constitution.">
+        <div class="article" data-summary="Florida man Robert Boston was arrested on charges of allegedly trespassing naked on his neighbor's property to fix a malfunctioning floodlight and Ring camera.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/politics/after-losing-senate-seat-cassidy-answers-whether-he-regrets-voting-impeach-trump" target="_blank" rel="noopener">After losing Senate seat, Cassidy answers whether he regrets voting to impeach Trump</a>
+          <a href="https://www.foxnews.com/outkick-culture/wearing-watch-headlamp-flip-flops-isnt-great-disguise-trashing-neighbors-motion-light" target="_blank" rel="noopener">Wearing only a watch, a headlamp and flip-flops isn't a great disguise when trashing a neighbor's motion light</a>
           
         </div>
-        <div class="article" data-summary="The mother of transgender track athlete AB Hernandez criticizes school officials for allowing female athletes to share the podium at CIF state events.">
+        <div class="article" data-summary="U.S. Africa Command leader says Africa serves as &quot;Putin's purse,&quot; fueling Russia's war in Ukraine through resource extraction and recruitment networks.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/outkick-sports/trans-track-athlete-ab-hernandezs-mom-shares-critical-post-school-officials-podium-placements" target="_blank" rel="noopener">Trans track athlete AB Hernandez's mom shares critical post of school officials over podium placements</a>
+          <a href="https://www.foxnews.com/politics/putin-using-africa-purse-ukraine-war-while-us-faces-intelligence-black-hole-commander" target="_blank" rel="noopener">Putin using Africa as ‘purse’ for Ukraine war while US faces ‘intelligence black hole’: commander</a>
           
         </div>
-        <div class="article" data-summary="A YouGov survey of over 44,000 diners finds Pizza Hut edges out Domino's as America's best-tasting fast-food pizza, with Papa Johns ranking third in the list.">
+        <div class="article" data-summary="Stanley Cup Playoff conference finals are set, but Vegas deals with fallout after Tortorella's fine and draft pick penalty appeal was denied.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/food-drink/americas-best-tasting-pizza-chain-old-school-favorite-survey-finds" target="_blank" rel="noopener">America's best-tasting pizza chain is an old-school favorite, survey finds</a>
+          <a href="https://www.foxnews.com/outkick-sports/nhl-upholds-penalties-golden-knights-hints-possible-future-draft-compensation-team-complies" target="_blank" rel="noopener">NHL upholds penalties against Golden Knights but hints at possible future draft compensation if team complies</a>
           
         </div>
-        <div class="article" data-summary="Prince Harry and Meghan Markle, the Duke and Duchess of Sussex, continue leveraging royal connections after their exit, with experts divided on whether it helps or hurts.">
+        <div class="article" data-summary="California doctor accused of submitting $45 million in false Medicare claims for Botox injections was convicted of wire fraud and obstruction charges.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/entertainment/prince-harry-meghan-markle-face-renewed-criticism-half-half-royal-role-experts" target="_blank" rel="noopener">Prince Harry and Meghan Markle face renewed criticism over ‘half-in, half-out’ royal role: experts</a>
+          <a href="https://www.foxnews.com/us/california-doctor-convicted-45m-medicare-fraud-scheme-funded-luxury-vacations-12k-crossbow" target="_blank" rel="noopener">California doctor convicted of $45M Medicare fraud scheme that funded luxury vacations and a $12K crossbow</a>
           
         </div>
-        <div class="article" data-summary="The widening fiscal gap between red and blue America is driving migration patterns as states compete for residents with vastly different tax models.">
+        <div class="article" data-summary="American cruise passenger says she is forced to quarantine in Omaha after possible hantavirus exposure aboard the MV Hondius despite testing negative.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/politics/blue-state-tax-burden-fuels-americans-fleeing-republican-led-southern-states" target="_blank" rel="noopener">Blue-state tax burden fuels Americans fleeing to Republican-led southern states</a>
+          <a href="https://www.foxnews.com/health/woman-says-shes-held-cruise-ship-hantavirus-scare" target="_blank" rel="noopener">Woman says she’s being held against her will after cruise ship hantavirus scare</a>
           
         </div>
-        <div class="article" data-summary="Poland seeks answers from U.S. officials after the Pentagon canceled a planned armored brigade rotation, raising concerns among NATO's top defense spender.">
+        <div class="article" data-summary="A trio of female Luigi Mangione supporters were seen outside the Manhattan Criminal Courts Building wearing press credentials designed to allow journalists access for reporting.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/politics/poland-seeks-answers-after-pentagon-scraps-planned-us-armored-brigade-rotation" target="_blank" rel="noopener">Poland seeks answers after Pentagon scraps planned US armored brigade rotation</a>
+          <a href="https://www.foxnews.com/media/mamdanis-office-draws-outrage-after-press-credentials-given-luigi-mangione-supporters" target="_blank" rel="noopener">Mamdani's office draws outrage after press credentials given to Luigi Mangione supporters</a>
           
         </div>
-        <div class="article" data-summary="House Democrats publicly question why the DNC has not released its 2024 election autopsy, with some calling the delay embarrassing for party leaders.">
+        <div class="article" data-summary="Acting AG Blanche and Sen. Van Hollen clash over whether a pardoned Jan. 6 rioter promised child abuse victims money from a DOJ restitution fund.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/politics/dems-demand-release-hidden-dnc-autopsy-2024-collapse-got-butts-kicked" target="_blank" rel="noopener">Dems demand release of hidden DNC autopsy after 2024 collapse: ‘We got our butts kicked’</a>
+          <a href="https://www.foxnews.com/politics/watch-dem-senator-snaps-acting-ag-blanche-accuses-obviously-lying-heated-exchange" target="_blank" rel="noopener">WATCH: Dem senator snaps after Acting AG Blanche accuses him of 'obviously lying' in heated exchange</a>
           
         </div>
-        <div class="article" data-summary="Tyler Robinson, accused of assassinating Charlie Kirk at a Utah event, faces court hearing on defense motions to seal evidence and close testimony.">
+        <div class="article" data-summary="The Cavs face the favored Knicks in the Eastern Conference Finals, with a first-quarter betting play favoring Cleveland at +1.5 to start strong.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/us/tyler-robinsons-defense-team-fights-seal-evidence-punish-prosecutors-charlie-kirks-assassination" target="_blank" rel="noopener">Tyler Robinson's defense team fights to seal evidence and punish prosecutors in Charlie Kirk's assassination</a>
+          <a href="https://www.foxnews.com/outkick-sports/cavs-first-quarter-energy-could-smart-play-potentially-rusty-knicks-squad" target="_blank" rel="noopener">Why the Cavs' first-quarter energy could be the smart play against a potentially rusty Knicks squad</a>
           
         </div>
-        <div class="article" data-summary="J.T. Ginn carried a no-hitter into the ninth inning before the Angels broke it up with a single and a walk-off home run to beat the Athletics 2-1.">
+        <div class="article" data-summary="Socialist D.C. mayoral candidate Janeese Lewis George faces backlash for calling youth curfews &quot;dangerous&quot; amid rising teen brawls in Navy Yard.">
           <span class="source">Fox News</span>
-          <a href="https://www.foxnews.com/sports/pitcher-jt-ginn-loses-hitter-9th-angels-hit-walk-home-run" target="_blank" rel="noopener">A's pitcher JT Ginn loses no-hitter in 9th, Angels hit walk-off home run</a>
+          <a href="https://www.foxnews.com/politics/mamdani-style-dc-mayoral-hopeful-dragged-over-exactly-backwards-response-violent-teen-mobs" target="_blank" rel="noopener">Mamdani-style DC mayoral hopeful dragged over 'exactly backwards' response to violent teen mobs</a>
           
         </div>
-        <div class="article" data-summary="The growing popularity of prediction markets has caught the attention of kids online safety advocates in Congress and gambling researchers, putting pressure on the industry to explain what they are doing to prevent minors and those younger than 21 from using their platforms. The scrutiny from Congress largely comes from a contingent of lawmakers who...">
+        <div class="article" data-summary="President Trump on Tuesday backed Attorney General Ken Paxton in the Texas Senate GOP primary over incumbent John Cornyn. &quot;Ken is a true MAGA Warrior who has ALWAYS delivered for Texas, and will continue to do so in the United States Senate,&quot; Trump wrote on Truth Social. Paxton and Cornyn will meet in a runoff...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/policy/technology/5883658-lawmakers-address-prediction-markets/" target="_blank" rel="noopener">Kids digital safety concerns collide with prediction market debate</a>
+          <a href="https://thehill.com/homenews/administration/5883563-trump-blanche-kentucky-primary-thomas-massie/" target="_blank" rel="noopener">Live updates: Vance says Paxton 'was there for' Trump, earning him endorsement for Texas Senate</a>
           
         </div>
-        <div class="article" data-summary="Sen. Ruben Gallego (D-Ariz.) will propose amendments to immigration policy on Tuesday as part of reconciliation legislation to fund federal immigration enforcement agencies. Gallego, the son of a Colombian mother and a Mexican father, will file three amendments during the Senate Homeland Security and Governmental Affairs Committee markup, according to copies of his proposals obtained...">
+        <div class="article" data-summary="A jury ruled that Live Nation-Ticketmaster is a monopoly in violation of federal and state antitrust laws, and the states that brought the case should use their leverage to press for a settlement that locks in real consumer protections and opens up the marketplace to more competition.">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/senate/5884372-senate-daca-amendments-gallego/" target="_blank" rel="noopener">Gallego to offer DACA, immigration enforcement amendments for reconciliation bill</a>
+          <a href="https://thehill.com/opinion/judiciary/5884315-live-nation-antitrust-lawsuit/" target="_blank" rel="noopener">Ticketmaster's monopoly verdict opens the door to real reform</a>
           
         </div>
-        <div class="article" data-summary="Republicans on Capitol Hill are seeking to shift the blame for the redistricting war onto Democrats, downplaying President Trump’s leading role in a gerrymandering frenzy that’s unpopular with voters of all stripes. Trump instigated the rare, mid-decade redistricting fight last summer when he pressed Texas state Republicans to redraw their map with designs to eliminate five Democratic...">
+        <div class="article" data-summary="Senate Republicans on Tuesday vented their frustration and disappointment over President Trump’s decision to endorse state Attorney General Ken Paxton over Sen. John Cornyn (R) in the Texas Senate Republican primary, a move that deals a crushing blow to Cornyn’s hopes of winning the May 26 runoff. “I don’t understand. He is an ethically challenged...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/house/5883852-republicans-blame-redistricting-democrats/" target="_blank" rel="noopener">Republicans seek to shift blame for unpopular redistricting war</a>
+          <a href="https://thehill.com/homenews/senate/5885414-paxton-cornyn-texas-senate-trump/" target="_blank" rel="noopener">Senate Republicans fume over Trump backing Paxton in Texas race</a>
           
         </div>
-        <div class="article" data-summary="Republicans see President Trump's sagging approval ratings as a major problem heading into the midterms. Their fears are underscored by a New York Times/Siena College poll released on Monday showing Trump’s approval ratings hitting new second term lows as voters expressed anxiety about inflation, gas prices and U.S. involvement in the war in Iran. ...">
+        <div class="article" data-summary="President Trump said Monday that he is ordering the Justice Department to investigate mail-in ballots in Maryland after the state’s election board reported some voters received the wrong ballot for the upcoming primary elections. “In Maryland, they sent out 500,000 Illegal Mail In Ballots, and they got caught! So now, they’re going to send...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/state-watch/5883896-republicans-fear-trump-approval-decline/" target="_blank" rel="noopener">Republicans grow increasingly worried about Trump’s negative polls</a>
+          <a href="https://thehill.com/homenews/administration/5885369-trump-maryland-mail-ballots-doj-investigation/" target="_blank" rel="noopener">Trump orders DOJ to investigate mail-in ballots in Maryland</a>
           
         </div>
-        <div class="article" data-summary="President Trump is ramping up pressure on GOP leaders to attach the Safeguard American Voter Eligibility (SAVE America) Act to must-pass legislation, a move that would complicate an already difficult stretch on Capitol Hill. Republicans in both chambers are racing to get a bipartisan housing bill, a long-term extension of the Foreign Intelligence Surveillance Act’s...">
+        <div class="article" data-summary="Former New York City Mayor Bill De Blasio (D) put California Gov. Gavin Newsom (D) at the top of his list of Democrats likely to enter the next presidential race. He told The Hill’s broadcast partner, NewsNation, on Monday that Newsom “has played his cards the best for 2028.” The former mayor cited Newsom’s involvement...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/house/5884025-trump-gop-save-act-housing-fisa/" target="_blank" rel="noopener">Trump’s SAVE America Act push creates fresh headaches for GOP leaders</a>
+          <a href="https://thehill.com/homenews/campaign/5885367-democrats-potential-candidates-2028-presidential/" target="_blank" rel="noopener">De Blasio: Newsom 'has played his cards the best for 2028'</a>
           
         </div>
-        <div class="article" data-summary="The resounding defeat of Sen. Bill Cassidy (R) in Saturday's Louisiana primary has sent shockwaves through the Senate Republican Conference, underscoring how Republicans who look to distance themselves from President Trump and his low approval ratings will have to think twice about paying a political price for perceived disloyalty. Cassidy’s ouster came a few weeks...">
+        <div class="article" data-summary="Former FBI Director James Comey on Monday said he guesses he'll &quot;be in line&quot; for the Department of Justice's (DOJ) $1.776 billion compensation fund for individuals who believe they have been targeted for investigation or prosecution. He told CNN's Jake Tapper that he first thought news of the DOJ's &quot;anti-weaponization fund&quot; was a &quot;piece from...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/senate/5884028-trump-republican-party-loyalty/" target="_blank" rel="noopener">Trump’s ouster of Republican senator sends shockwaves through Senate GOP</a>
+          <a href="https://thehill.com/homenews/administration/5885232-comey-doj-settlement-compensation/" target="_blank" rel="noopener">Comey eyes new 'anti-weaponization' fund: 'I'm guessing I'll be in line'</a>
           
         </div>
-        <div class="article" data-summary="Six states are set to conclude primary voting Tuesday, with the spotlight on Rep. Thomas Massie’s (R) ugly primary battle in Kentucky and the highly competitive Senate and gubernatorial contests in Georgia. The Kentucky House primary marks the latest front in President Trump’s fight to oust GOP dissenters and another test of his influence among the party’s...">
+        <div class="article" data-summary="In mid-May 1996, eight climbing guides, Sherpas, and their paying clients lost their lives on Mount Everest. A brutal storm contributed to the tragedy, as did the guides' decision to continue to the summit too late in the day. But in his book &quot;Into Thin Air,&quot; mountain climber and writer Jon Krakauer, who was climbing with one of the guided Everest expeditions on assignment for &quot;Outside,&quot; also appeared to cast partial blame on a wealthy...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/campaign/5883312-trump-massie-kentucky-georgia-alabama-primary-elections/" target="_blank" rel="noopener">Trump-Massie feud hits fever pitch: What to watch in Kentucky, Georgia, Alabama primaries</a>
+          <a href="https://thehill.com/opinion/campaign/5883221-krakauer-everest-wealthy-criticism/" target="_blank" rel="noopener">The 1996 Everest disaster and our eternal contempt for the wealthy</a>
           
         </div>
-        <div class="article" data-summary="Rep. Thomas Massie (R-Ky.) will be the latest Republican to face his fate against a Trump-backed primary challenger on Tuesday. Retired Navy SEAL Ed Gallrein is Massie’s official opponent. But the real threat comes from the White House, where President Trump has repeatedly blasted the libertarian-minded incumbent. Massie is extremely skeptical of government spending in...">
+        <div class="article" data-summary="Presented by Tokyo Electron {beacon} PRESENTED BY In today's issue: It’s Tuesday. I can’t get over the viral video of 🎥 children teaching the pope how to do the 6-7 trend. This is so 2026. Blanche says new DOJ fund could pay Trump allies Trump shows off ballroom construction Vance’s turn at the White...">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/administration/5883993-gallrein-massie-kentucky-gop/" target="_blank" rel="noopener">The Memo: Massie seeks to buck GOP trend, survive Trump-enforced exit</a>
+          <a href="https://thehill.com/newsletters/1230-report/5885309-doj-compensation-fund-trump-allies/" target="_blank" rel="noopener">Blanche defends $1.8B fund that could pay Trump allies, Jan. 6 rioters</a>
           
         </div>
-        <div class="article" data-summary="Texas Attorney General Ken Paxton (R) on Monday opened an investigation into the Southern Poverty Law Center (SPLC) over its alleged funding of extremist groups it claimed to oppose. Last month, a federal grand jury in Montgomery, Ala., indicted the SPLC on six counts of wire fraud, four counts of bank fraud and one count...">
+        <div class="article" data-summary="Is your area getting a new Target store?">
           <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/state-watch/5884347-texas-investigates-splc-funding/" target="_blank" rel="noopener">Paxton investigating Southern Poverty Law Center in Texas</a>
+          <a href="https://thehill.com/business/5885087-target-just-opened-6-stores-while-dozens-more-in-the-works-heres-where/" target="_blank" rel="noopener">Target just opened 6 stores, while dozens more in the works: Here's where</a>
           
         </div>
-        <div class="article" data-summary="Sen. Thom Tillis (R-N.C.) is urging his Senate Republican colleagues to delay action on a budget reconciliation package to fund immigration enforcement operations through 2029, in part because he said a proposal to spend $1 billion on the White House ballroom is “a major policy problem.” He threatened to vote no on the budget reconciliation...">
-          <span class="source">The Hill</span>
-          <a href="https://thehill.com/homenews/senate/5884333-tillis-urges-delay-budget-reconciliation-ballroom-funding/" target="_blank" rel="noopener">Tillis urges GOP colleagues to hold budget bill over White House ballroom funding</a>
-          
-        </div>
-        <div class="article" data-summary="A cup of coffee with latte art depicting a brain">
+        <div class="article" data-summary="Eight members of the Congressional Black Caucus stand next to each other at a press conference, with chair Rep. Yvette Clark standing at the lectern.">
           <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/19/coffee-is-good-for-your-brain/" target="_blank" rel="noopener">Coffee Is Good for Your Brain</a>
+          <a href="https://reason.com/2026/05/19/the-congressional-black-caucus-opposes-a-college-sports-bill-because-of-gerrymandering/" target="_blank" rel="noopener">The Congressional Black Caucus Opposes a College Sports Bill Because of Gerrymandering</a>
           
         </div>
-        <div class="article" data-summary="A cell phone with a facial scanning app">
+        <div class="article" data-summary="President Donald Trump superimposed against the Internal Revenue Service (IRS) building in Washington, D.C.">
           <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/19/brickbat-lets-see-some-id-3/" target="_blank" rel="noopener">Brickbat: Let's See Some ID</a>
+          <a href="https://reason.com/2026/05/19/trump-settles-his-own-lawsuit-against-the-irs-for-1-8-billion-of-your-money/" target="_blank" rel="noopener">Trump Settles His Own Lawsuit Against the IRS for $1.8 Billion of Your Money</a>
           
         </div>
-        <div class="article" data-summary="What’s on your mind?">
+        <div class="article" data-summary="A protester records immigration agents">
           <span class="source">Reason</span>
-          <a href="https://reason.com/volokh/2026/05/19/open-thread-209/" target="_blank" rel="noopener">Open Thread</a>
+          <a href="https://reason.com/2026/05/19/filming-cops-is-a-first-amendment-right-the-feds-keep-harassing-people-for-it-anyway/" target="_blank" rel="noopener">Filming Cops Is a First Amendment Right. The Feds Keep Harassing People for It Anyway.</a>
           
         </div>
-        <div class="article" data-summary="Kimberly Moore may rival Neal Katyal for the most cringey YouTube video in recent memory.">
+        <div class="article" data-summary="Patent nerds should not pretend to be talented enough to boast about making a Schoolhouse Rock video.">
           <span class="source">Reason</span>
-          <a href="https://reason.com/volokh/2026/05/19/chief-judge-moore-commissions-bizarre-ai-cartoon-about-the-federal-circuit-without-judge-newman/" target="_blank" rel="noopener">Chief Judge Moore Commissions Bizarre AI Cartoon About The Federal Circuit Without Judge Newman</a>
+          <a href="https://reason.com/volokh/2026/05/19/the-dangerous-allure-when-untalented-people-use-ai/" target="_blank" rel="noopener">The Dangerous Allure When Untalented People Use AI</a>
           
         </div>
-        <div class="article" data-summary="The federal court denied a similar motion; the state court grants it in part.">
+        <div class="article" data-summary="&quot;But China, Russia, Sudan, Iran, Myanmar, Haiti, the Congo, North Korea, all way worse. And that's how you know it's anti-Semitism. It's the inconsistency.&quot;">
           <span class="source">Reason</span>
-          <a href="https://reason.com/volokh/2026/05/18/the-missing-part-of-the-state-court-mangione-suppression-ruling/" target="_blank" rel="noopener">The Missing Part of the State Court Mangione Suppression Ruling?</a>
-          
-        </div>
-        <div class="article" data-summary="An illustration of Rand Paul, Thomas Massie, and Donald Trump">
-          <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/18/donald-trump-thomas-massie-and-the-long-slow-death-of-the-tea-party/" target="_blank" rel="noopener">Donald Trump, Thomas Massie, and the Long, Slow Death of the Tea Party</a>
-          
-        </div>
-        <div class="article" data-summary="Matt Welch appears on the left, and Robby Soave appears on the right. An image of Rep. Thomas Massie appears in the center box. Bold text across the top of the screen reads &quot;REAL POLITICAL OUTSIDER.&quot;">
-          <span class="source">Reason</span>
-          <a href="https://reason.com/podcast/2026/05/18/why-is-trump-trying-to-purge-thomas-massie/" target="_blank" rel="noopener">Why Is Trump Trying To Purge Thomas Massie?</a>
-          
-        </div>
-        <div class="article" data-summary="It was a bad idea when Biden proposed it, and it's a bad idea now that Trump is proposing it. Want lower gas prices? End the war.">
-          <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/18/trumps-federal-gas-tax-holiday-would-save-drivers-less-than-9-per-month/" target="_blank" rel="noopener">Donald Trump and Josh Hawley's Federal Gas Tax Holiday Would Save Drivers Less Than $9 Per Month</a>
-          
-        </div>
-        <div class="article" data-summary="Colorado Gov. Jared Polis">
-          <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/18/jared-polis-controversial-commutation-of-tina-peters-prison-sentence-upholds-freedom-of-speech/" target="_blank" rel="noopener">Jared Polis' Controversial Commutation of Tina Peters' Prison Sentence Upholds Freedom of Speech</a>
+          <a href="https://reason.com/volokh/2026/05/19/bill-maher-on-the-blatant-double-standard-for-antisemitism/" target="_blank" rel="noopener">Bill Maher On The Blatant Double Standard For Antisemitism</a>
           
         </div>
         <div class="article" data-summary="In two separate photos, split down the middle, the left photo has a man in a leather jacket holding a baseball bat, and another man is wearing body armor and a baseball hat, while in the photo on the right stands a man wearing body armor, a long black jacket, and a holstered sword.">
           <span class="source">Reason</span>
-          <a href="https://reason.com/2026/05/18/samurai-vs-squatters-i-rode-along-with-the-armed-enforcers-handling-californias-squatter-crisis/" target="_blank" rel="noopener">Samurai vs. Squatters: On the Street With the Hired Swords Reclaiming California Property Owners' Stolen Homes</a>
+          <a href="https://reason.com/2026/05/19/what-i-learned-shadowing-californias-katana-wielding-anti-squatter-enforcers/" target="_blank" rel="noopener">What I Learned Shadowing California's Katana-Wielding Anti-Squatter Enforcers</a>
           
         </div>
-        <div class="article" data-summary="The national average price for regular gas increased again on Tuesday, climbing to $4.533 per gallon. It marked the third consecutive day of pump price increases, less than a week before the Memorial Day Weekend holiday, traditionally recognized as the beginning of the summer season. Gas prices have fluctuated between $4.50 and $4.56 per gallon […]">
-          <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/news/4573835/gas-prices-three-consecutive-days-of-increases-at-the-pumps-to-begin-work-week/" target="_blank" rel="noopener">Gas prices: Three consecutive days of increases at the pumps to begin the week</a>
+        <div class="article" data-summary="Striking LIRR workers">
+          <span class="source">Reason</span>
+          <a href="https://reason.com/2026/05/19/union-summer/" target="_blank" rel="noopener">Union Summer</a>
           
         </div>
-        <div class="article" data-summary="In Focus delivers deeper coverage of the political, cultural, and ideological issues shaping America. Published daily by senior writers and experts, these in-depth pieces go beyond the headlines to give readers the full picture. You can find our full list of In Focus pieces here. The State Department’s announcement that it is putting Mexico’s extensive […]">
-          <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/in_focus/4573136/mexicos-consulate-network-is-a-foreign-lobbying-operation/" target="_blank" rel="noopener">Mexico’s consulate network is a foreign lobbying operation</a>
+        <div class="article" data-summary="&quot;How [plaintiff's lawyer] then could have blindly and solely trusted Claude to remedy the brief is difficult to fathom.&quot;">
+          <span class="source">Reason</span>
+          <a href="https://reason.com/volokh/2026/05/19/instead-claude-just-made-up-more-stuff/" target="_blank" rel="noopener">"Instead, Claude Just Made Up More Stuff"</a>
           
         </div>
-        <div class="article" data-summary="The Supreme Court‘s weakening of the Voting Rights Act in the Louisiana v. Callais ruling has led to much anxiety about the representation of African American voters in the Deep South. But leaders in the Asian American community are also warning that the ruling could affect the Democratic Party‘s ability to galvanize their voters with […]">
-          <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/news/campaigns/congressional/4568748/asian-american-vote-democrats-not-doing-enough/" target="_blank" rel="noopener">Asians to Democrats: You’re not doing enough to win our votes</a>
+        <div class="article" data-summary="The conventional view in American criminal justice is that the victim's representative should be able to assert rights on behalf of the deceased victim in a homicide case--a view that Professor Peter Reilly and I defend in a new law review article.">
+          <span class="source">Reason</span>
+          <a href="https://reason.com/volokh/2026/05/19/should-a-murder-victim-have-rights-in-the-criminal-justice-process/" target="_blank" rel="noopener">Should a Murder Victim Have Rights in the Criminal Justice Process?</a>
           
         </div>
-        <div class="article" data-summary="The public hates inflation. Ever-rising prices reduce prosperity for households and businesses. There are daily articles about high prices for gasoline, electricity, and beef. But rarely does the media spotlight inflation caused by greedy public sector unions that use their monopoly bargaining power to extract absurd wages and benefits. For the first time since 1994, […]">
-          <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/op-eds/4572806/robber-baron-long-island-rail-road-strike/" target="_blank" rel="noopener">The robber baron Long Island Rail Road strike</a>
+        <div class="article" data-summary="From Thursday's decision by Magistrate Judge JoAnna Gibson McFadden in Doe v. Amazon.com Servs. LLC: Jane Doe has sued Amazon.com… The post Plaintiff's Immigration Concerns Don't Justify Pseudonymity appeared first on Reason.com.">
+          <span class="source">Reason</span>
+          <a href="https://reason.com/volokh/2026/05/19/plaintiffs-immigration-concerns-dont-justify-pseudonymity/" target="_blank" rel="noopener">Plaintiff's Immigration Concerns Don't Justify Pseudonymity</a>
           
         </div>
-        <div class="article" data-summary="The Islamic Republic of Iran created the Persian Gulf Strait Authority to collect tolls for ships seeking to transit the Strait of Hormuz’s international waters. The normal toll? $2 million. The Islamic Revolutionary Guard Corps reportedly controls the Authority. That matters because the U.S. designates the Revolutionary Guards in its entirety as a terrorist group. […]">
+        <div class="article" data-summary="Relying upon the current ceasefire to prevent resumed U.S. and Israeli strikes against its territory, Iran is simultaneously seeking to degrade the confidence of America’s Sunni Arab allies. Launching attacks on the United Arab Emirates, Iran wants the UAE and Saudi Arabia to question the value of America’s protective umbrella. Iran launched drone attacks on […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/opinion/beltway-confidential/4571633/trump-needs-a-tougher-iran-negotiating-strategy/" target="_blank" rel="noopener">Trump needs a tougher Iran negotiating strategy</a>
+          <a href="https://www.washingtonexaminer.com/opinion/beltway-confidential/4573059/uae-strikes-iran-targets-us-credibility/" target="_blank" rel="noopener">With UAE strikes, Iran targets US credibility</a>
           
         </div>
-        <div class="article" data-summary="Sen. Bill Cassidy (R-LA), fresh off a stunning primary election loss over the weekend to two Republican challengers, holds no remorse for actions that likely cost him his political career. That includes his 2021 vote to convict President Donald Trump of impeachment over the U.S. Capitol riot. “I voted to uphold the Constitution. That may […]">
+        <div class="article" data-summary="The school in Minab, Iran, that was purportedly hit erroneously by U.S. forces during the opening salvo of the war is on an “active IRGC cruise missile base,” CENTCOM Commander Adm. Brad Cooper said. The U.S. military is investigating whether it was responsible for a strike that occurred on Feb. 28, the first day of […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/news/senate/4573703/bill-cassidy-no-regrets-after-primary-loss/" target="_blank" rel="noopener">An unburdened Bill Cassidy doesn’t regret Trump impeachment vote after primary loss</a>
+          <a href="https://www.washingtonexaminer.com/policy/defense/4574408/iran-school-us-active-missile-site-centcom/" target="_blank" rel="noopener">Iran school allegedly hit by US was on active missile site: CENTCOM</a>
           
         </div>
-        <div class="article" data-summary="Both U.S. and Chinese officials tout President Donald Trump’s two-day visit to Beijing last week as a masterclass in pageantry and transactional diplomacy. Smiles were exchanged, lucrative trade deals were verbally committed to, and a fragile consensus was reached on stabilizing bilateral ties and managing global flashpoints such as the Iran crisis. Yet, beneath the […]">
+        <div class="article" data-summary="Rep. Thomas Massie (R-KY) made a rare appearance on Fox News in a final push to hold on to his House seat. The interview aired on Tuesday, as Kentucky voters head to the polls to choose between the seven-term incumbent and Trump-backed primary challenger Ed Gallrein in the state’s Republican primary. Massie’s appearance on the conservative cable […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/restoring-america/courage-strength-optimism/4572977/trump-china-visit-high-stakes-brinkmanship-taiwan/" target="_blank" rel="noopener">Trump China visit in the rearview: High-stakes brinkmanship over Taiwan</a>
+          <a href="https://www.washingtonexaminer.com/news/campaigns/congressional/4574525/thomas-massie-fox-news-final-day-kentucky-primary/" target="_blank" rel="noopener">Massie makes rare Fox News appearance on final day of Kentucky primary</a>
           
         </div>
-        <div class="article" data-summary="On May 15, Israel eliminated Izz al-Din al-Haddad, better known inside Hamas as Abu Suhaib. The strike in Gaza City removed the terrorist organization’s most senior military commander with real operational authority inside the territory. With his death, Hamas has effectively lost the last figure capable of exercising unified battlefield control over its forces in […]">
+        <div class="article" data-summary="Commander of U.S. Central Command Adm. Brad Cooper pushed back after Rep. Seth Moulton (D-MA) pressed him on the number of American deaths during the Iran war. The tense exchange unfolded during a Tuesday hearing before the House Armed Services Committee as lawmakers questioned the Trump administration’s strategy in the region amid a fragile ceasefire between the […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/op-eds/4572767/israel-decapitated-hamas-igaza/" target="_blank" rel="noopener">Israel just decapitated Hamas in Gaza</a>
+          <a href="https://www.washingtonexaminer.com/policy/defense/4574559/admiral-cooper-call-moulton-question-troops-dying-inappropriate/" target="_blank" rel="noopener">CENTCOM admiral calls Seth Moulton’s question about troops dying in Iran ‘entirely inappropriate’</a>
           
         </div>
-        <div class="article" data-summary="As we celebrate America’s 250th anniversary, we reflect on our shared good fortune. Becoming a citizen, either by birth or by choice, affords us a special kind of privilege. It’s a form of privilege unmatched in the developed world. Our country is by no means perfect, yet the freedoms, opportunities, vast natural beauty, and rugged […]">
+        <div class="article" data-summary="In Focus delivers deeper coverage of the political, cultural, and ideological issues shaping America. Published daily by senior writers and experts, these in-depth pieces go beyond the headlines to give readers the full picture. You can find our full list of In Focus pieces here. Back in 1979, Mike Wallace of 60 Minutes asked late-night […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/restoring-america/patriotism-unity/4573429/loneliest-generation-does-not-love-america/" target="_blank" rel="noopener">The loneliest generation doesn’t love America. That’s on us</a>
+          <a href="https://www.washingtonexaminer.com/in_focus/4574524/stephen-colbert-turned-into-pompous-dullard-he-once-satirized/" target="_blank" rel="noopener">Stephen Colbert turned into the pompous dullard he once satirized</a>
           
         </div>
-        <div class="article" data-summary="Washington, D.C. Mayor Muriel Bowser is calling for the Council of the District of Columbia to implement a curfew for juveniles in the Washington, D.C. metropolitan area as a public safety matter. Bowser’s plea comes after a violent brawl during a so-called “teen takeover” in the capital city’s Navy Yard section. Video of a melee […]">
+        <div class="article" data-summary="Police in Fredericksburg, Virginia, are searching for a suspect wearing a pink costume who was allegedly targeting children. The Fredericksburg Police Department said they were alerted to suspicious activity around 4:30 p.m. in the Lafayette Boulevard corridor on May 14. Police obtained a picture of the suspect, and said patrols have increased in the area […]">
           <span class="source">Washington Examiner</span>
-          <a href="https://www.washingtonexaminer.com/news/4573827/bowser-urges-dc-council-to-pass-emergency-legislation-to-restore-juvenile-curfew/" target="_blank" rel="noopener">Bowser urges DC Council to pass ‘emergency legislation to restore juvenile curfew’ after ‘teen takeover’</a>
+          <a href="https://www.washingtonexaminer.com/news/crime/4574572/police-search-pink-costumed-suspect-fredericksburg-virginia/" target="_blank" rel="noopener">Police search for pink costumed suspect in Virginia</a>
+          
+        </div>
+        <div class="article" data-summary="A Fulton County, Georgia, judge ruled that the state must allow poll watchers to observe the Secretary of State’s office’s final verification of Georgia’s primary election results, deciding so just hours before the state’s polls close. Three Peach State Republican candidates sued Georgia Secretary of State Brad Raffensperger over transparency in the 2026 election vote-counting […]">
+          <span class="source">Washington Examiner</span>
+          <a href="https://www.washingtonexaminer.com/news/campaigns/state/4574223/georgia-judge-allows-poll-watchers-monitor-tabulation-primary-results/" target="_blank" rel="noopener">Georgia judge allows poll watchers to monitor tabulation of primary results</a>
+          
+        </div>
+        <div class="article" data-summary="Gov. Jeff Landry’s (R-LA) “cookie diplomacy” sparked backlash online, with critics questioning President Donald Trump’s messaging abroad. A bizarre interaction between Landry and Greenlandic children is drawing ridicule after a video appeared to show Trump allies attempting an awkward charm offensive during a visit connected to Trump’s renewed interest in Greenland. An anti-Trump account called […]">
+          <span class="source">Washington Examiner</span>
+          <a href="https://www.washingtonexaminer.com/news/world/4574489/jeff-landry-greenland-children-chocolate-chip-cookies/" target="_blank" rel="noopener">Jeff Landry to Greenland children: ‘You can have all the chocolate chip cookies you can eat’</a>
+          
+        </div>
+        <div class="article" data-summary="House Minority Leader Hakeem Jeffries (D-NY) is bullish on Democrats’ prospects to retake control of the House despite the GOP’s redistricting advantage following the Supreme Court’s weakening of the Voting Rights Act. Jeffries, who would become the nation’s first African American House Speaker if Democrats win control, compared the 2026 midterms to 2018, when Democrats […]">
+          <span class="source">Washington Examiner</span>
+          <a href="https://www.washingtonexaminer.com/news/campaigns/congressional/4572494/hakeem-jeffries-democrats-redistricting-spanberger/" target="_blank" rel="noopener">Hakeem Jeffries believes Democrats can overcome redistricting disadvantage and win the House</a>
+          
+        </div>
+        <div class="article" data-summary="The State Department announced sanctions on Tuesday on four people tied to organizations supporting Gaza-bound flotillas, accusing them of providing material backing to Hamas. The move comes as activists attempt another high-profile effort to challenge Israel’s naval blockade of Gaza, with 44 of the organizers’ boats being intercepted by Israeli forces. The sanctions, imposed by […]">
+          <span class="source">Washington Examiner</span>
+          <a href="https://www.washingtonexaminer.com/news/world/4574566/us-sanctions-flotilla-organizers-providing-support-gaza/" target="_blank" rel="noopener">US sanctions flotilla organizers providing support to Gaza</a>
           
         </div></section></div>
     </div>
   </main>
 
-  <footer>Daily Balanced News &bull; Powered by public RSS feeds &bull; 2026-05-19 10:54</footer>
+  <footer>Daily Balanced News &bull; Powered by public RSS feeds &bull; 2026-05-19 14:20</footer>
 
   <script>
     const input  = document.getElementById('search');

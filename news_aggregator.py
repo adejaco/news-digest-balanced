@@ -41,11 +41,11 @@ SOURCES = [
     {"name": "Reason",              "lean": "center-right",  "url": "https://reason.com/feed/"},
     {"name": "Washington Examiner", "lean": "center-right",  "url": "https://www.washingtonexaminer.com/feed"},
     # Right
-    {"name": "New York Post",       "lean": "right",         "url": "https://nypost.com/feed/"},
-    {"name": "National Review",     "lean": "right",         "url": "https://www.nationalreview.com/feed/"},
     {"name": "Breitbart",           "lean": "right",         "url": "https://feeds.feedburner.com/breitbart"},
+    {"name": "National Review",     "lean": "right",         "url": "https://www.nationalreview.com/feed/"},
     {"name": "Daily Caller",        "lean": "right",         "url": "https://dailycaller.com/feed/"},
     {"name": "The Federalist",      "lean": "right",         "url": "https://thefederalist.com/feed/"},
+    {"name": "New York Post",       "lean": "right",         "url": "https://nypost.com/feed/"},
 ]
 
 MAX_PER_SOURCE       = 10
@@ -196,15 +196,17 @@ def _section(lean: str, grouped: dict) -> str:
           <a href="{a["link"]}" target="_blank" rel="noopener">{a["title"]}</a>
           {also}
         </div>"""
-    return f'<section><div class="lean-header" style="background:{bg}">{label}</div>{items}</section>'
+    anchor = lean.replace(" ", "-")
+    return f'<section id="{anchor}"><div class="lean-header" style="background:{bg}">{label}</div>{items}</section>'
 
 
 def _spectrum_legend() -> str:
     items = ""
-    for lean in LEAN_ORDER:
+    for lean in ["center-left", "center-right"]:
         color = _rgb_css(lean)
         label = lean.upper()
-        items += f'<span class="sp-item"><span class="sp-dot" style="background:{color}"></span>{label}</span>'
+        anchor = lean.replace(" ", "-")
+        items += f'<a class="sp-item" href="#{anchor}"><span class="sp-dot" style="background:{color}"></span>{label}</a>'
     return f'<div class="spectrum">{items}</div>'
 
 
@@ -224,6 +226,16 @@ def build_html(articles: list, output_path: str) -> None:
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRMRK1ZN78"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {{
+        dataLayer.push(arguments);
+    }}
+    gtag('js', new Date());
+    gtag('config', 'G-BRMRK1ZN78');
+</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -321,6 +333,11 @@ def build_html(articles: list, output_path: str) -> None:
       font-weight: 700;
       letter-spacing: 0.6px;
       color: #64748b;
+      text-decoration: none;
+      cursor: pointer;
+    }}
+    .sp-item:hover {{
+      color: #2563eb;
     }}
     .sp-dot {{
       width: 9px;
